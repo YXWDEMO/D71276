@@ -1,0 +1,1479 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    system_py32c642.o(i.SystemCoreClockUpdate) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_py32c642.o(i.SystemCoreClockUpdate) refers to system_py32c642.o(.data) for .data
+    system_py32c642.o(i.SystemCoreClockUpdate) refers to system_py32c642.o(.constdata) for .constdata
+    system_py32c642.o(i.SystemInit) refers to system_py32c642.o(i.DelayTime) for DelayTime
+    startup_py32c642xx.o(RESET) refers to startup_py32c642xx.o(STACK) for __initial_sp
+    startup_py32c642xx.o(RESET) refers to startup_py32c642xx.o(.text) for Reset_Handler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.NMI_Handler) for NMI_Handler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.SVC_Handler) for SVC_Handler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.EXTI0_1_IRQHandler) for EXTI0_1_IRQHandler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.EXTI2_3_IRQHandler) for EXTI2_3_IRQHandler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.EXTI4_15_IRQHandler) for EXTI4_15_IRQHandler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.TIM1_BRK_UP_TRG_COM_IRQHandler) for TIM1_BRK_UP_TRG_COM_IRQHandler
+    startup_py32c642xx.o(RESET) refers to py32c642_it.o(i.TIM14_IRQHandler) for TIM14_IRQHandler
+    startup_py32c642xx.o(.text) refers to system_py32c642.o(i.SystemInit) for SystemInit
+    startup_py32c642xx.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    main.o(i.main) refers to sys.o(i.APP_SystemClockConfig) for APP_SystemClockConfig
+    main.o(i.main) refers to py32c642_ll_utils.o(i.LL_mDelay) for LL_mDelay
+    main.o(i.main) refers to pwr.o(i.option_init) for option_init
+    main.o(i.main) refers to gpio.o(i.Gpio_Init) for Gpio_Init
+    main.o(i.main) refers to adc.o(i.adc_init) for adc_init
+    main.o(i.main) refers to pwr.o(i.iwdg_init) for iwdg_init
+    main.o(i.main) refers to tim.o(i.timer1_init) for timer1_init
+    main.o(i.main) refers to tim.o(i.timer14_init) for timer14_init
+    main.o(i.main) refers to aip33a06.o(i.sysinit) for sysinit
+    main.o(i.main) refers to lptim.o(i.lptim_init) for lptim_init
+    main.o(i.main) refers to lptim.o(i.lptim_start) for lptim_start
+    main.o(i.main) refers to aip33a06.o(i.Ram_Clear) for Ram_Clear
+    main.o(i.main) refers to aip33a06.o(i.display) for display
+    main.o(i.main) refers to aip33a06.o(i.delay_ms) for delay_ms
+    py32c642_it.o(i.EXTI0_1_IRQHandler) refers to py32c642_it.o(i.LL_EXTI_IsActiveFlag) for LL_EXTI_IsActiveFlag
+    py32c642_it.o(i.EXTI2_3_IRQHandler) refers to py32c642_it.o(i.LL_EXTI_IsActiveFlag) for LL_EXTI_IsActiveFlag
+    py32c642_it.o(i.EXTI4_15_IRQHandler) refers to py32c642_it.o(i.LL_EXTI_IsActiveFlag) for LL_EXTI_IsActiveFlag
+    py32c642_it.o(i.TIM14_IRQHandler) refers to out.o(i.Get_Oil_Leve) for Get_Oil_Leve
+    py32c642_it.o(i.TIM14_IRQHandler) refers to main.o(.data) for tim_flag
+    py32c642_it.o(i.TIM14_IRQHandler) refers to out.o(.bss) for OutInfo
+    py32c642_it.o(i.TIM14_IRQHandler) refers to portscan.o(.bss) for ScanInfo
+    py32c642_it.o(i.TIM14_IRQHandler) refers to sys.o(.bss) for SysInfo
+    py32c642_it.o(i.TIM14_IRQHandler) refers to main.o(.ARM.__AT_0x20000A00) for Out_Oil_Time
+    py32c642_it.o(i.TIM14_IRQHandler) refers to switchdip.o(.data) for swInfo
+    py32c642xx_ll_start_kit.o(i.BSP_LED_DeInit) refers to py32c642xx_ll_start_kit.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    py32c642xx_ll_start_kit.o(i.BSP_LED_DeInit) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642xx_ll_start_kit.o(i.BSP_LED_DeInit) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Init) refers to py32c642xx_ll_start_kit.o(i.LL_IOP_GRP1_EnableClock) for LL_IOP_GRP1_EnableClock
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Init) refers to py32c642xx_ll_start_kit.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Init) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Init) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Off) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Off) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_LED_On) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642xx_ll_start_kit.o(i.BSP_LED_On) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Toggle) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642xx_ll_start_kit.o(i.BSP_LED_Toggle) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_PB_DeInit) refers to py32c642xx_ll_start_kit.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    py32c642xx_ll_start_kit.o(i.BSP_PB_DeInit) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_PB_DeInit) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642xx_ll_start_kit.o(i.BSP_PB_GetState) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642xx_ll_start_kit.o(i.BSP_PB_GetState) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_PB_Init) refers to py32c642xx_ll_start_kit.o(i.LL_IOP_GRP1_EnableClock) for LL_IOP_GRP1_EnableClock
+    py32c642xx_ll_start_kit.o(i.BSP_PB_Init) refers to py32c642xx_ll_start_kit.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    py32c642xx_ll_start_kit.o(i.BSP_PB_Init) refers to py32c642xx_ll_start_kit.o(.constdata) for .constdata
+    py32c642xx_ll_start_kit.o(i.BSP_PB_Init) refers to py32c642xx_ll_start_kit.o(.data) for .data
+    py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockFreq) refers to py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockSource) for LL_RCC_GetCOMPClockSource
+    py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockFreq) refers to py32c642_ll_rcc.o(i.LL_RCC_GetLSCClockFreq) for LL_RCC_GetLSCClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockFreq) refers to py32c642_ll_rcc.o(i.RCC_GetSystemClockFreq) for RCC_GetSystemClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockFreq) refers to py32c642_ll_rcc.o(i.RCC_GetHCLKClockFreq) for RCC_GetHCLKClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockFreq) refers to py32c642_ll_rcc.o(i.RCC_GetPCLK1ClockFreq) for RCC_GetPCLK1ClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetLPTIMClockFreq) refers to py32c642_ll_rcc.o(i.RCC_GetSystemClockFreq) for RCC_GetSystemClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetLPTIMClockFreq) refers to py32c642_ll_rcc.o(i.RCC_GetHCLKClockFreq) for RCC_GetHCLKClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetLPTIMClockFreq) refers to py32c642_ll_rcc.o(i.RCC_GetPCLK1ClockFreq) for RCC_GetPCLK1ClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetLPTIMClockFreq) refers to py32c642_ll_rcc.o(i.LL_RCC_LSI_GetFreq) for LL_RCC_LSI_GetFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetLSCClockFreq) refers to py32c642_ll_rcc.o(i.LL_RCC_LSI_GetFreq) for LL_RCC_LSI_GetFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetMCOClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    py32c642_ll_rcc.o(i.LL_RCC_GetMCOClockFreq) refers to py32c642_ll_rcc.o(i.LL_RCC_LSI_GetFreq) for LL_RCC_LSI_GetFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetMCOClockFreq) refers to system_py32c642.o(.constdata) for HSIFreqTable
+    py32c642_ll_rcc.o(i.LL_RCC_GetMCOClockFreq) refers to system_py32c642.o(.data) for SystemCoreClock
+    py32c642_ll_rcc.o(i.LL_RCC_GetSystemClocksFreq) refers to py32c642_ll_rcc.o(i.RCC_GetSystemClockFreq) for RCC_GetSystemClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetSystemClocksFreq) refers to py32c642_ll_rcc.o(i.RCC_GetHCLKClockFreq) for RCC_GetHCLKClockFreq
+    py32c642_ll_rcc.o(i.LL_RCC_GetSystemClocksFreq) refers to py32c642_ll_rcc.o(i.RCC_GetPCLK1ClockFreq) for RCC_GetPCLK1ClockFreq
+    py32c642_ll_rcc.o(i.RCC_GetHCLKClockFreq) refers to system_py32c642.o(.constdata) for AHBPrescTable
+    py32c642_ll_rcc.o(i.RCC_GetPCLK1ClockFreq) refers to system_py32c642.o(.constdata) for APBPrescTable
+    py32c642_ll_rcc.o(i.RCC_GetSystemClockFreq) refers to py32c642_ll_rcc.o(i.LL_RCC_LSI_GetFreq) for LL_RCC_LSI_GetFreq
+    py32c642_ll_rcc.o(i.RCC_GetSystemClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    py32c642_ll_rcc.o(i.RCC_GetSystemClockFreq) refers to system_py32c642.o(.constdata) for HSIFreqTable
+    py32c642_ll_utils.o(i.LL_Init1msTick) refers to uidiv.o(.text) for __aeabi_uidivmod
+    py32c642_ll_utils.o(i.LL_SetSystemCoreClock) refers to system_py32c642.o(.data) for SystemCoreClock
+    py32c642_hal_flash.o(i.FLASH_MassErase) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.FLASH_PageErase) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.FLASH_WaitForLastOperation) refers to py32c642_hal.o(i.HAL_GetTick) for HAL_GetTick
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase) refers to py32c642_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase) refers to py32c642_hal_flash.o(i.FLASH_MassErase) for FLASH_MassErase
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase) refers to py32c642_hal_flash.o(i.FLASH_PageErase) for FLASH_PageErase
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase) refers to py32c642_hal_flash.o(i.FLASH_SectorErase) for FLASH_SectorErase
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase) refers to py32c642_hal_flash.o(.constdata) for .constdata
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase_IT) refers to py32c642_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase_IT) refers to py32c642_hal_flash.o(i.FLASH_MassErase) for FLASH_MassErase
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase_IT) refers to py32c642_hal_flash.o(i.FLASH_PageErase) for FLASH_PageErase
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase_IT) refers to py32c642_hal_flash.o(i.FLASH_SectorErase) for FLASH_SectorErase
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase_IT) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_Erase_IT) refers to py32c642_hal_flash.o(.constdata) for .constdata
+    py32c642_hal_flash.o(i.HAL_FLASH_GetError) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to py32c642_hal_flash.o(i.HAL_FLASH_OperationErrorCallback) for HAL_FLASH_OperationErrorCallback
+    py32c642_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to py32c642_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback) for HAL_FLASH_EndOfOperationCallback
+    py32c642_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to py32c642_hal_flash.o(i.FLASH_PageErase) for FLASH_PageErase
+    py32c642_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to py32c642_hal_flash.o(i.FLASH_SectorErase) for FLASH_SectorErase
+    py32c642_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_OBBOOTProgram) refers to py32c642_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    py32c642_hal_flash.o(i.HAL_FLASH_OBBOOTProgram) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_OBBOOTProgram) refers to py32c642_hal_flash.o(.constdata) for .constdata
+    py32c642_hal_flash.o(i.HAL_FLASH_OBProgram) refers to py32c642_hal_flash.o(i.FLASH_OB_OptrConfig) for FLASH_OB_OptrConfig
+    py32c642_hal_flash.o(i.HAL_FLASH_OBProgram) refers to py32c642_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    py32c642_hal_flash.o(i.HAL_FLASH_OBProgram) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_OBProgram) refers to py32c642_hal_flash.o(.constdata) for .constdata
+    py32c642_hal_flash.o(i.HAL_FLASH_PageProgram) refers to py32c642_hal_flash.o(i.HAL_FLASH_Program) for HAL_FLASH_Program
+    py32c642_hal_flash.o(i.HAL_FLASH_PageProgram_IT) refers to py32c642_hal_flash.o(i.HAL_FLASH_Program_IT) for HAL_FLASH_Program_IT
+    py32c642_hal_flash.o(i.HAL_FLASH_Program) refers to py32c642_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    py32c642_hal_flash.o(i.HAL_FLASH_Program) refers to py32c642_hal_flash.o(i.FLASH_Program_Page) for FLASH_Program_Page
+    py32c642_hal_flash.o(i.HAL_FLASH_Program) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_Program) refers to py32c642_hal_flash.o(.constdata) for .constdata
+    py32c642_hal_flash.o(i.HAL_FLASH_Program_IT) refers to py32c642_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    py32c642_hal_flash.o(i.HAL_FLASH_Program_IT) refers to py32c642_hal_flash.o(i.FLASH_Program_Page) for FLASH_Program_Page
+    py32c642_hal_flash.o(i.HAL_FLASH_Program_IT) refers to py32c642_hal_flash.o(.bss) for .bss
+    py32c642_hal_flash.o(i.HAL_FLASH_Program_IT) refers to py32c642_hal_flash.o(.constdata) for .constdata
+    py32c642_hal.o(i.HAL_DeInit) refers to py32c642_hal.o(i.HAL_MspDeInit) for HAL_MspDeInit
+    py32c642_hal.o(i.HAL_Delay) refers to py32c642_hal.o(i.HAL_GetTick) for HAL_GetTick
+    py32c642_hal.o(i.HAL_Delay) refers to py32c642_hal.o(.data) for .data
+    py32c642_hal.o(i.HAL_GetTick) refers to py32c642_hal.o(.data) for .data
+    py32c642_hal.o(i.HAL_GetTickFreq) refers to py32c642_hal.o(.data) for .data
+    py32c642_hal.o(i.HAL_GetTickPrio) refers to py32c642_hal.o(.data) for .data
+    py32c642_hal.o(i.HAL_IncTick) refers to py32c642_hal.o(.data) for .data
+    py32c642_hal.o(i.HAL_Init) refers to py32c642_hal.o(i.HAL_InitTick) for HAL_InitTick
+    py32c642_hal.o(i.HAL_Init) refers to py32c642_hal.o(i.HAL_MspInit) for HAL_MspInit
+    py32c642_hal.o(i.HAL_InitTick) refers to uidiv.o(.text) for __aeabi_uidivmod
+    py32c642_hal.o(i.HAL_InitTick) refers to py32c642_hal_cortex.o(i.HAL_SYSTICK_Config) for HAL_SYSTICK_Config
+    py32c642_hal.o(i.HAL_InitTick) refers to py32c642_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    py32c642_hal.o(i.HAL_InitTick) refers to py32c642_hal.o(.data) for .data
+    py32c642_hal.o(i.HAL_InitTick) refers to system_py32c642.o(.data) for SystemCoreClock
+    py32c642_hal.o(i.HAL_SetTickFreq) refers to py32c642_hal.o(i.HAL_InitTick) for HAL_InitTick
+    py32c642_hal.o(i.HAL_SetTickFreq) refers to py32c642_hal.o(.data) for .data
+    py32c642_hal_cortex.o(i.HAL_NVIC_SetPriority) refers to py32c642_hal_cortex.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    py32c642_hal_cortex.o(i.HAL_SYSTICK_Config) refers to py32c642_hal_cortex.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    py32c642_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) refers to py32c642_hal_cortex.o(i.HAL_SYSTICK_Callback) for HAL_SYSTICK_Callback
+    py32c642_ll_tim.o(i.LL_TIM_IC_Init) refers to py32c642_ll_tim.o(i.IC4Config) for IC4Config
+    py32c642_ll_tim.o(i.LL_TIM_IC_Init) refers to py32c642_ll_tim.o(i.IC1Config) for IC1Config
+    py32c642_ll_tim.o(i.LL_TIM_IC_Init) refers to py32c642_ll_tim.o(i.IC2Config) for IC2Config
+    py32c642_ll_tim.o(i.LL_TIM_IC_Init) refers to py32c642_ll_tim.o(i.IC3Config) for IC3Config
+    py32c642_ll_tim.o(i.LL_TIM_OC_Init) refers to py32c642_ll_tim.o(i.OC4Config) for OC4Config
+    py32c642_ll_tim.o(i.LL_TIM_OC_Init) refers to py32c642_ll_tim.o(i.OC1Config) for OC1Config
+    py32c642_ll_tim.o(i.LL_TIM_OC_Init) refers to py32c642_ll_tim.o(i.OC2Config) for OC2Config
+    py32c642_ll_tim.o(i.LL_TIM_OC_Init) refers to py32c642_ll_tim.o(i.OC3Config) for OC3Config
+    adc.o(i.Adc_CalBatRef) refers to adc.o(i.Bcd2ToByte) for Bcd2ToByte
+    adc.o(i.Adc_CalBatRef) refers to uidiv.o(.text) for __aeabi_uidivmod
+    adc.o(i.Adc_CalBatRef) refers to ffltui.o(.text) for __aeabi_ui2f
+    adc.o(i.Adc_CalBatRef) refers to dfltui.o(.text) for __aeabi_ui2d
+    adc.o(i.Adc_CalBatRef) refers to dmul.o(.text) for __aeabi_dmul
+    adc.o(i.Adc_CalBatRef) refers to dadd.o(.text) for __aeabi_dadd
+    adc.o(i.Adc_CalBatRef) refers to f2d.o(.text) for __aeabi_f2d
+    adc.o(i.Adc_CalBatRef) refers to d2f.o(.text) for __aeabi_d2f
+    adc.o(i.Adc_CalBatRef) refers to fmul.o(.text) for __aeabi_fmul
+    adc.o(i.Adc_CalBatRef) refers to ffixui.o(.text) for __aeabi_f2uiz
+    adc.o(i.Adc_CalBatRef) refers to adc.o(.data) for .data
+    adc.o(i.GetADCValue) refers to adc.o(i.adc_disable) for adc_disable
+    adc.o(i.GetADCValue) refers to adc.o(i.adc_channel_config) for adc_channel_config
+    adc.o(i.GetADCValue) refers to adc.o(i.adc_enable) for adc_enable
+    adc.o(i.GetAverageADCValue) refers to adc.o(i.GetADCValue) for GetADCValue
+    adc.o(i.GetAverageADCValue) refers to uidiv.o(.text) for __aeabi_uidivmod
+    adc.o(i.adc_channel_config) refers to adc.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    adc.o(i.adc_channel_config) refers to adc.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    adc.o(i.adc_channels_config) refers to adc.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    adc.o(i.adc_channels_config) refers to adc.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    adc.o(i.adc_enable) refers to adc.o(i.delay_us) for delay_us
+    adc.o(i.adc_init) refers to py32c642_ll_adc.o(i.LL_ADC_Init) for LL_ADC_Init
+    adc.o(i.adc_init) refers to py32c642_ll_adc.o(i.LL_ADC_REG_Init) for LL_ADC_REG_Init
+    adc.o(i.adc_init) refers to py32c642_ll_utils.o(i.LL_mDelay) for LL_mDelay
+    adc.o(i.adc_vcc) refers to adc.o(i.adc_dr) for adc_dr
+    adc.o(i.adc_vcc) refers to uidiv.o(.text) for __aeabi_uidivmod
+    gpio.o(i.Gpio_Init) refers to gpio.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    gpio.o(i.Gpio_Init) refers to gpio.o(i.LL_GPIO_SetPinPull) for LL_GPIO_SetPinPull
+    gpio.o(i.Gpio_Init) refers to gpio.o(i.LL_GPIO_SetPinOutputType) for LL_GPIO_SetPinOutputType
+    gpio.o(i.Gpio_Init) refers to gpio.o(i.LL_GPIO_SetPinSpeed) for LL_GPIO_SetPinSpeed
+    pwr.o(i.option_init) refers to memseta.o(.text) for __aeabi_memclr4
+    pwr.o(i.option_init) refers to py32c642_hal_flash.o(i.HAL_FLASH_Unlock) for HAL_FLASH_Unlock
+    pwr.o(i.option_init) refers to py32c642_hal_flash.o(i.HAL_FLASH_OB_Unlock) for HAL_FLASH_OB_Unlock
+    pwr.o(i.option_init) refers to py32c642_hal_flash.o(i.HAL_FLASH_OBProgram) for HAL_FLASH_OBProgram
+    pwr.o(i.option_init) refers to py32c642_hal_flash.o(i.HAL_FLASH_Lock) for HAL_FLASH_Lock
+    pwr.o(i.option_init) refers to py32c642_hal_flash.o(i.HAL_FLASH_OB_Lock) for HAL_FLASH_OB_Lock
+    pwr.o(i.option_init) refers to py32c642_hal_flash.o(i.HAL_FLASH_OB_Launch) for HAL_FLASH_OB_Launch
+    flash.o(i.Flash_Blank) refers to flash.o(i.Flash_Erase) for Flash_Erase
+    flash.o(i.Flash_Erase) refers to py32c642_hal_flash.o(i.HAL_FLASH_Unlock) for HAL_FLASH_Unlock
+    flash.o(i.Flash_Erase) refers to memseta.o(.text) for __aeabi_memclr4
+    flash.o(i.Flash_Erase) refers to py32c642_hal_flash.o(i.HAL_FLASH_Erase) for HAL_FLASH_Erase
+    flash.o(i.Flash_Program) refers to py32c642_hal_flash.o(i.HAL_FLASH_Program) for HAL_FLASH_Program
+    flash.o(i.Flash_Program) refers to py32c642_hal_flash.o(i.HAL_FLASH_Lock) for HAL_FLASH_Lock
+    flash.o(i.flash_Write_User_Data) refers to flash.o(i.Flash_Erase) for Flash_Erase
+    flash.o(i.flash_Write_User_Data) refers to flash.o(i.Flash_Program) for Flash_Program
+    flash.o(i.flash_Write_User_Data) refers to flash.o(i.Flash_Verity) for Flash_Verity
+    tim.o(i.timer14_init) refers to tim.o(i.LL_APB1_GRP2_EnableClock) for LL_APB1_GRP2_EnableClock
+    tim.o(i.timer14_init) refers to memseta.o(.text) for __aeabi_memclr4
+    tim.o(i.timer14_init) refers to py32c642_ll_tim.o(i.LL_TIM_Init) for LL_TIM_Init
+    tim.o(i.timer14_init) refers to tim.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    tim.o(i.timer1_init) refers to tim.o(i.LL_APB1_GRP2_EnableClock) for LL_APB1_GRP2_EnableClock
+    tim.o(i.timer1_init) refers to memseta.o(.text) for __aeabi_memclr4
+    tim.o(i.timer1_init) refers to py32c642_ll_tim.o(i.LL_TIM_Init) for LL_TIM_Init
+    tim.o(i.timer1_init) refers to tim.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    tim.o(i.timer1_pwm) refers to memseta.o(.text) for __aeabi_memclr4
+    tim.o(i.timer1_pwm) refers to py32c642_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+    tim.o(i.timer1_pwm) refers to py32c642_ll_tim.o(i.LL_TIM_OC_Init) for LL_TIM_OC_Init
+    lptim.o(i.lptim_init) refers to py32c642_ll_lptim.o(i.LL_LPTIM_Init) for LL_LPTIM_Init
+    lptim.o(i.lptim_init) refers to main.o(i.APP_ErrorHandler) for APP_ErrorHandler
+    lptim.o(i.lptim_start) refers to adc.o(i.delay_us) for delay_us
+    disp.o(i.DISP_Deal) refers to aip33a06.o(i.Ram_Clear) for Ram_Clear
+    disp.o(i.DISP_Deal) refers to disp.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    disp.o(i.DISP_Deal) refers to aip33a06.o(i.sysinit) for sysinit
+    disp.o(i.DISP_Deal) refers to aip33a06.o(i.display) for display
+    disp.o(i.DISP_Deal) refers to uidiv.o(.text) for __aeabi_uidivmod
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_bat) for display_bat
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_oil) for display_oil
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_bigstar) for display_bigstar
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_contour_in) for display_contour_in
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_contour_out) for display_contour_out
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_star) for display_star
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_dolphin) for display_dolphin
+    disp.o(i.DISP_Deal) refers to disp.o(i.display_yellow) for display_yellow
+    disp.o(i.DISP_Deal) refers to dfltui.o(.text) for __aeabi_ui2d
+    disp.o(i.DISP_Deal) refers to dmul.o(.text) for __aeabi_dmul
+    disp.o(i.DISP_Deal) refers to ddiv.o(.text) for __aeabi_ddiv
+    disp.o(i.DISP_Deal) refers to dfixui.o(.text) for __aeabi_d2uiz
+    disp.o(i.DISP_Deal) refers to disp.o(.bss) for .bss
+    disp.o(i.DISP_Deal) refers to portscan.o(.bss) for ScanInfo
+    disp.o(i.DISP_Deal) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    disp.o(i.DISP_Deal) refers to sys.o(.bss) for SysInfo
+    disp.o(i.DISP_Deal) refers to main.o(.ARM.__AT_0x20000A20) for Oil_Leve
+    disp.o(i.DISP_Deal) refers to disp.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    disp.o(i.DISP_Deal) refers to baterry.o(i.Get_Bat_Leve_Map) for Get_Bat_Leve_Map
+    disp.o(i.DISP_Deal) refers to out.o(i.Get_Oil_Leve_Map) for Get_Oil_Leve_Map
+    disp.o(i.DISP_Deal) refers to disp.o(i.Set_Disp_Num) for Set_Disp_Num
+    disp.o(i.DISP_Deal) refers to baterry.o(i.BatVoltage) for BatVoltage
+    disp.o(i.DISP_Deal) refers to baterry.o(.bss) for BatInfo
+    disp.o(i.DISP_Deal) refers to disp.o(.data) for .data
+    disp.o(i.Set_Disp_Num) refers to baterry.o(i.Get_Bat_Leve_Map) for Get_Bat_Leve_Map
+    disp.o(i.Set_Disp_Num) refers to out.o(i.ClrShortData) for ClrShortData
+    disp.o(i.Set_Disp_Num) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    disp.o(i.Set_Disp_Num) refers to out.o(.bss) for OutInfo
+    disp.o(i.Set_Disp_Num) refers to portscan.o(.bss) for ScanInfo
+    disp.o(i.Set_Disp_Num) refers to disp.o(.bss) for .bss
+    disp.o(i.Smok_Disp_Deal) refers to baterry.o(i.BatVoltage) for BatVoltage
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    disp.o(i.Smok_Disp_Deal) refers to aip33a06.o(i.sysinit) for sysinit
+    disp.o(i.Smok_Disp_Deal) refers to aip33a06.o(i.Ram_Clear) for Ram_Clear
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_bat) for display_bat
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_oil) for display_oil
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_contour_out) for display_contour_out
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_Bat_logo) for display_Bat_logo
+    disp.o(i.Smok_Disp_Deal) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_Oil_logo) for display_Oil_logo
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_contour_in) for display_contour_in
+    disp.o(i.Smok_Disp_Deal) refers to dfltui.o(.text) for __aeabi_ui2d
+    disp.o(i.Smok_Disp_Deal) refers to dmul.o(.text) for __aeabi_dmul
+    disp.o(i.Smok_Disp_Deal) refers to ddiv.o(.text) for __aeabi_ddiv
+    disp.o(i.Smok_Disp_Deal) refers to dfixui.o(.text) for __aeabi_d2uiz
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_yellow) for display_yellow
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_star) for display_star
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_bigstar) for display_bigstar
+    disp.o(i.Smok_Disp_Deal) refers to dflti.o(.text) for __aeabi_i2d
+    disp.o(i.Smok_Disp_Deal) refers to uidiv.o(.text) for __aeabi_uidivmod
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.display_dolphin) for display_dolphin
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(.data) for .data
+    disp.o(i.Smok_Disp_Deal) refers to portscan.o(.bss) for ScanInfo
+    disp.o(i.Smok_Disp_Deal) refers to disp.o(.bss) for .bss
+    disp.o(i.Smok_Disp_Deal) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    disp.o(i.Smok_Disp_Deal) refers to main.o(.ARM.__AT_0x20000A20) for Oil_Leve
+    disp.o(i.Smok_Disp_Deal) refers to baterry.o(.bss) for BatInfo
+    disp.o(i.Smok_Disp_Deal) refers to switchdip.o(.data) for swInfo
+    disp.o(i.display_Bat_logo) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_Oil_logo) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat) refers to disp.o(i.display_bat_100) for display_bat_100
+    disp.o(i.display_bat) refers to disp.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    disp.o(i.display_bat) refers to uidiv.o(.text) for __aeabi_uidivmod
+    disp.o(i.display_bat) refers to disp.o(i.display_bat_L0) for display_bat_L0
+    disp.o(i.display_bat) refers to disp.o(.bss) for .bss
+    disp.o(i.display_bat) refers to disp.o(.data) for .data
+    disp.o(i.display_bat) refers to portscan.o(.bss) for ScanInfo
+    disp.o(i.display_bat_100) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_L0) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_L0) refers to disp.o(i.display_bat_bit0) for display_bat_bit0
+    disp.o(i.display_bat_bit0) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit1) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit2) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit3) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit4) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit5) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit6) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit7) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit8) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_bit9) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten0) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten1) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten2) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten3) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten4) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten5) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten6) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten7) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten8) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bat_ten9) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_bigstar) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_contour_in) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_contour_out) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_contour_out) refers to switchdip.o(.data) for swInfo
+    disp.o(i.display_dolphin) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil) refers to disp.o(i.display_oil_100) for display_oil_100
+    disp.o(i.display_oil) refers to uidiv.o(.text) for __aeabi_uidivmod
+    disp.o(i.display_oil) refers to disp.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    disp.o(i.display_oil) refers to disp.o(i.display_oil_L0) for display_oil_L0
+    disp.o(i.display_oil) refers to disp.o(.bss) for .bss
+    disp.o(i.display_oil) refers to disp.o(.data) for .data
+    disp.o(i.display_oil) refers to sys.o(.bss) for SysInfo
+    disp.o(i.display_oil) refers to portscan.o(.bss) for ScanInfo
+    disp.o(i.display_oil_100) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_L0) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_L0) refers to disp.o(i.display_oil_bit0) for display_oil_bit0
+    disp.o(i.display_oil_bit0) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit1) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit2) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit3) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit4) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit5) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit6) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit7) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit8) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_bit9) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten0) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten1) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten2) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten3) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten4) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten5) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten6) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten7) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten8) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_oil_ten9) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_star) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_version) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(i.display_version) refers to disp.o(i.display_bat_bit0) for display_bat_bit0
+    disp.o(i.display_yellow) refers to aip33a06.o(i.write_data) for write_data
+    disp.o(.data) refers to disp.o(i.display_bat_bit0) for display_bat_bit0
+    disp.o(.data) refers to disp.o(i.display_bat_bit1) for display_bat_bit1
+    disp.o(.data) refers to disp.o(i.display_bat_bit2) for display_bat_bit2
+    disp.o(.data) refers to disp.o(i.display_bat_bit3) for display_bat_bit3
+    disp.o(.data) refers to disp.o(i.display_bat_bit4) for display_bat_bit4
+    disp.o(.data) refers to disp.o(i.display_bat_bit5) for display_bat_bit5
+    disp.o(.data) refers to disp.o(i.display_bat_bit6) for display_bat_bit6
+    disp.o(.data) refers to disp.o(i.display_bat_bit7) for display_bat_bit7
+    disp.o(.data) refers to disp.o(i.display_bat_bit8) for display_bat_bit8
+    disp.o(.data) refers to disp.o(i.display_bat_bit9) for display_bat_bit9
+    disp.o(.data) refers to disp.o(i.display_bat_ten0) for display_bat_ten0
+    disp.o(.data) refers to disp.o(i.display_bat_ten1) for display_bat_ten1
+    disp.o(.data) refers to disp.o(i.display_bat_ten2) for display_bat_ten2
+    disp.o(.data) refers to disp.o(i.display_bat_ten3) for display_bat_ten3
+    disp.o(.data) refers to disp.o(i.display_bat_ten4) for display_bat_ten4
+    disp.o(.data) refers to disp.o(i.display_bat_ten5) for display_bat_ten5
+    disp.o(.data) refers to disp.o(i.display_bat_ten6) for display_bat_ten6
+    disp.o(.data) refers to disp.o(i.display_bat_ten7) for display_bat_ten7
+    disp.o(.data) refers to disp.o(i.display_bat_ten8) for display_bat_ten8
+    disp.o(.data) refers to disp.o(i.display_bat_ten9) for display_bat_ten9
+    disp.o(.data) refers to disp.o(i.display_oil_bit0) for display_oil_bit0
+    disp.o(.data) refers to disp.o(i.display_oil_bit1) for display_oil_bit1
+    disp.o(.data) refers to disp.o(i.display_oil_bit2) for display_oil_bit2
+    disp.o(.data) refers to disp.o(i.display_oil_bit3) for display_oil_bit3
+    disp.o(.data) refers to disp.o(i.display_oil_bit4) for display_oil_bit4
+    disp.o(.data) refers to disp.o(i.display_oil_bit5) for display_oil_bit5
+    disp.o(.data) refers to disp.o(i.display_oil_bit6) for display_oil_bit6
+    disp.o(.data) refers to disp.o(i.display_oil_bit7) for display_oil_bit7
+    disp.o(.data) refers to disp.o(i.display_oil_bit8) for display_oil_bit8
+    disp.o(.data) refers to disp.o(i.display_oil_bit9) for display_oil_bit9
+    disp.o(.data) refers to disp.o(i.display_oil_ten0) for display_oil_ten0
+    disp.o(.data) refers to disp.o(i.display_oil_ten1) for display_oil_ten1
+    disp.o(.data) refers to disp.o(i.display_oil_ten2) for display_oil_ten2
+    disp.o(.data) refers to disp.o(i.display_oil_ten3) for display_oil_ten3
+    disp.o(.data) refers to disp.o(i.display_oil_ten4) for display_oil_ten4
+    disp.o(.data) refers to disp.o(i.display_oil_ten5) for display_oil_ten5
+    disp.o(.data) refers to disp.o(i.display_oil_ten6) for display_oil_ten6
+    disp.o(.data) refers to disp.o(i.display_oil_ten7) for display_oil_ten7
+    disp.o(.data) refers to disp.o(i.display_oil_ten8) for display_oil_ten8
+    disp.o(.data) refers to disp.o(i.display_oil_ten9) for display_oil_ten9
+    sys.o(i.APP_SystemClockConfig) refers to py32c642_ll_utils.o(i.LL_Init1msTick) for LL_Init1msTick
+    sys.o(i.APP_SystemClockConfig) refers to py32c642_ll_utils.o(i.LL_SetSystemCoreClock) for LL_SetSystemCoreClock
+    sys.o(i.Sys_Init) refers to sys.o(i.APP_SystemClockConfig) for APP_SystemClockConfig
+    sys.o(i.Sys_Init) refers to py32c642_ll_utils.o(i.LL_mDelay) for LL_mDelay
+    sys.o(i.Sys_Init) refers to pwr.o(i.option_init) for option_init
+    sys.o(i.Sys_Init) refers to gpio.o(i.Gpio_Init) for Gpio_Init
+    sys.o(i.Sys_Init) refers to tim.o(i.timer1_init) for timer1_init
+    sys.o(i.Sys_Init) refers to adc.o(i.adc_init) for adc_init
+    sys.o(i.Sys_Init) refers to tim.o(i.timer14_init) for timer14_init
+    out.o(i.ClrShortData) refers to main.o(.ARM.__AT_0x20000A30) for Short_Reset_Flag
+    out.o(i.ClrShortData) refers to main.o(.ARM.__AT_0x20000A40) for Short_Reset_Flag1
+    out.o(i.Get_Oil_Leve) refers to uidiv.o(.text) for __aeabi_uidivmod
+    out.o(i.Get_Oil_Leve) refers to out.o(i.Get_Oil_Leve_Map) for Get_Oil_Leve_Map
+    out.o(i.Get_Oil_Leve) refers to main.o(.ARM.__AT_0x20000A00) for Out_Oil_Time
+    out.o(i.Get_Oil_Leve) refers to main.o(.ARM.__AT_0x20000A20) for Oil_Leve
+    out.o(i.Get_Oil_Leve) refers to out.o(.bss) for .bss
+    out.o(i.Get_Out_Volt) refers to adc.o(i.GetADCValue) for GetADCValue
+    out.o(i.Get_Out_Volt) refers to out.o(.bss) for .bss
+    out.o(i.Get_Out_Volt) refers to baterry.o(.bss) for BatInfo
+    out.o(i.Interrup_Ctr_Mos_Deal) refers to out.o(.bss) for .bss
+    out.o(i.Out_Deal) refers to aip33a06.o(i.sysinit) for sysinit
+    out.o(i.Out_Deal) refers to baterry.o(i.BatVoltage) for BatVoltage
+    out.o(i.Out_Deal) refers to disp.o(i.Set_Disp_Num) for Set_Disp_Num
+    out.o(i.Out_Deal) refers to baterry.o(i.Smok_Start_Bat_Leve_Deal) for Smok_Start_Bat_Leve_Deal
+    out.o(i.Out_Deal) refers to adc.o(i.GetADCValue) for GetADCValue
+    out.o(i.Out_Deal) refers to adc.o(i.delay_us) for delay_us
+    out.o(i.Out_Deal) refers to out.o(i.SetShortData) for SetShortData
+    out.o(i.Out_Deal) refers to portscan.o(.bss) for ScanInfo
+    out.o(i.Out_Deal) refers to disp.o(.data) for Smg_Paoma_En_stop
+    out.o(i.Out_Deal) refers to disp.o(.bss) for Dispinfo
+    out.o(i.Out_Deal) refers to out.o(.bss) for .bss
+    out.o(i.Out_Deal) refers to sys.o(.bss) for SysInfo
+    out.o(i.Out_Deal) refers to switchdip.o(.data) for swInfo
+    out.o(i.Out_Deal) refers to baterry.o(.bss) for BatInfo
+    out.o(i.Out_Deal) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    out.o(i.Out_Deal) refers to baterry.o(.data) for Smok_Down_EN
+    out.o(i.Out_Deal) refers to main.o(.ARM.__AT_0x20000A00) for Out_Oil_Time
+    out.o(i.Out_Deal) refers to out.o(i.Get_Out_Volt) for Get_Out_Volt
+    out.o(i.Out_Deal) refers to uidiv.o(.text) for __aeabi_uidivmod
+    out.o(i.SetShortData) refers to main.o(.ARM.__AT_0x20000A30) for Short_Reset_Flag
+    out.o(i.SetShortData) refers to main.o(.ARM.__AT_0x20000A40) for Short_Reset_Flag1
+    out.o(i.ShortIsData) refers to main.o(.ARM.__AT_0x20000A30) for Short_Reset_Flag
+    out.o(i.ShortIsData) refers to main.o(.ARM.__AT_0x20000A40) for Short_Reset_Flag1
+    portscan.o(i.Get_Usb_Ad) refers to baterry.o(i.BatVoltage) for BatVoltage
+    portscan.o(i.Get_Usb_Ad) refers to adc.o(i.GetADCValue) for GetADCValue
+    portscan.o(i.Get_Usb_Ad) refers to baterry.o(.bss) for BatInfo
+    portscan.o(i.Out_Stop) refers to out.o(i.ClrShortData) for ClrShortData
+    portscan.o(i.Out_Stop) refers to disp.o(i.Set_Disp_Num) for Set_Disp_Num
+    portscan.o(i.Out_Stop) refers to portscan.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    portscan.o(i.Out_Stop) refers to disp.o(i.display_bat) for display_bat
+    portscan.o(i.Out_Stop) refers to disp.o(i.display_oil) for display_oil
+    portscan.o(i.Out_Stop) refers to portscan.o(.bss) for .bss
+    portscan.o(i.Out_Stop) refers to disp.o(.bss) for Dispinfo
+    portscan.o(i.Out_Stop) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    portscan.o(i.Out_Stop) refers to main.o(.ARM.__AT_0x20000A20) for Oil_Leve
+    portscan.o(i.Out_Stop) refers to disp.o(.data) for Smg_Paoma_En_stop
+    portscan.o(i.Out_Stop) refers to baterry.o(.bss) for BatInfo
+    portscan.o(i.Port_Scan) refers to portscan.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    portscan.o(i.Port_Scan) refers to portscan.o(i.Get_Usb_Ad) for Get_Usb_Ad
+    portscan.o(i.Port_Scan) refers to portscan.o(i.Out_Stop) for Out_Stop
+    portscan.o(i.Port_Scan) refers to portscan.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    portscan.o(i.Port_Scan) refers to aip33a06.o(i.sysinit) for sysinit
+    portscan.o(i.Port_Scan) refers to disp.o(i.Set_Disp_Num) for Set_Disp_Num
+    portscan.o(i.Port_Scan) refers to portscan.o(.bss) for .bss
+    portscan.o(i.Port_Scan) refers to baterry.o(.bss) for BatInfo
+    portscan.o(i.Port_Scan) refers to disp.o(.bss) for Dispinfo
+    portscan.o(i.Port_Scan) refers to disp.o(.data) for Smg_Paoma_En
+    portscan.o(i.Port_Scan) refers to out.o(.bss) for OutInfo
+    portscan.o(i.Power_Reset_Port_Scan) refers to portscan.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    portscan.o(i.Power_Reset_Port_Scan) refers to portscan.o(i.Get_Usb_Ad) for Get_Usb_Ad
+    portscan.o(i.Power_Reset_Port_Scan) refers to portscan.o(.bss) for .bss
+    portscan.o(i.Power_Reset_Port_Scan) refers to baterry.o(.bss) for BatInfo
+    baterry.o(i.BatVoltage) refers to adc.o(i.GetADCValue) for GetADCValue
+    baterry.o(i.BatVoltage) refers to adc.o(i.Adc_CalBatRef) for Adc_CalBatRef
+    baterry.o(i.BatVoltage) refers to uidiv.o(.text) for __aeabi_uidivmod
+    baterry.o(i.BatVoltage) refers to baterry.o(.bss) for .bss
+    baterry.o(i.Get_Bat_Leve) refers to baterry.o(i.BatVoltage) for BatVoltage
+    baterry.o(i.Get_Bat_Leve) refers to baterry.o(i.Get_Bat_Leve_Map) for Get_Bat_Leve_Map
+    baterry.o(i.Get_Bat_Leve) refers to portscan.o(.bss) for ScanInfo
+    baterry.o(i.Get_Bat_Leve) refers to baterry.o(.data) for .data
+    baterry.o(i.Get_Bat_Leve) refers to baterry.o(.bss) for .bss
+    baterry.o(i.Get_Bat_Leve) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    baterry.o(i.Get_Bat_Leve) refers to baterry.o(.constdata) for .constdata
+    baterry.o(i.Get_Bat_Leve) refers to disp.o(.data) for Smg_Paoma_En
+    baterry.o(i.Get_Power_Rest_BatLeve) refers to baterry.o(i.BatVoltage) for BatVoltage
+    baterry.o(i.Get_Power_Rest_BatLeve) refers to baterry.o(i.Get_Bat_Leve_Map) for Get_Bat_Leve_Map
+    baterry.o(i.Get_Power_Rest_BatLeve) refers to baterry.o(.bss) for .bss
+    baterry.o(i.Get_Power_Rest_BatLeve) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    baterry.o(i.Get_Power_Rest_BatLeve) refers to baterry.o(.constdata) for .constdata
+    baterry.o(i.Get_Power_Rest_BatLeve) refers to disp.o(.bss) for Dispinfo
+    baterry.o(i.Smok_Start_Bat_Leve_Deal) refers to baterry.o(i.Get_Bat_Leve_Map) for Get_Bat_Leve_Map
+    baterry.o(i.Smok_Start_Bat_Leve_Deal) refers to baterry.o(.bss) for .bss
+    baterry.o(i.Smok_Start_Bat_Leve_Deal) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    baterry.o(i.Smok_Start_Bat_Leve_Deal) refers to baterry.o(.constdata) for .constdata
+    baterry.o(i.Smok_Start_Bat_Leve_Deal) refers to baterry.o(.data) for .data
+    sleep.o(i.Gpio_Wake) refers to sleep.o(i.LL_APB1_GRP2_EnableClock) for LL_APB1_GRP2_EnableClock
+    sleep.o(i.Gpio_Wake) refers to sleep.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    sleep.o(i.Gpio_Wake) refers to sleep.o(i.LL_GPIO_SetPinOutputType) for LL_GPIO_SetPinOutputType
+    sleep.o(i.Gpio_Wake) refers to sleep.o(i.LL_GPIO_SetPinPull) for LL_GPIO_SetPinPull
+    sleep.o(i.Gpio_Wake) refers to sleep.o(i.LL_GPIO_SetPinSpeed) for LL_GPIO_SetPinSpeed
+    sleep.o(i.Sleep) refers to sleep.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    sleep.o(i.Sleep) refers to aip33a06.o(i.dis_sleep) for dis_sleep
+    sleep.o(i.Sleep) refers to aip33a06.o(i.Ram_Clear) for Ram_Clear
+    sleep.o(i.Sleep) refers to baterry.o(i.Get_Power_Rest_BatLeve) for Get_Power_Rest_BatLeve
+    sleep.o(i.Sleep) refers to sleep.o(i.enter_stop) for enter_stop
+    sleep.o(i.Sleep) refers to sleep.o(i.Gpio_Wake) for Gpio_Wake
+    sleep.o(i.Sleep) refers to disp.o(.bss) for Dispinfo
+    sleep.o(i.Sleep) refers to sys.o(.bss) for SysInfo
+    sleep.o(i.Sleep) refers to portscan.o(.bss) for ScanInfo
+    sleep.o(i.Sleep) refers to baterry.o(.bss) for BatInfo
+    sleep.o(i.Sleep) refers to disp.o(.data) for Smg_Paoma_En_stop
+    sleep.o(i.Sleep) refers to out.o(.bss) for OutInfo
+    sleep.o(i.Sleep_Gpio) refers to memseta.o(.text) for __aeabi_memclr4
+    sleep.o(i.Sleep_Gpio) refers to py32c642_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+    sleep.o(i.Sleep_Gpio) refers to sleep.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    sleep.o(i.Sleep_Gpio) refers to sleep.o(i.LL_GPIO_SetPinPull) for LL_GPIO_SetPinPull
+    sleep.o(i.Sleep_Gpio) refers to sleep.o(i.LL_GPIO_SetPinSpeed) for LL_GPIO_SetPinSpeed
+    sleep.o(i.Sleep_Gpio) refers to sleep.o(i.LL_GPIO_SetPinOutputType) for LL_GPIO_SetPinOutputType
+    sleep.o(i.Sleep_Gpio) refers to py32c642_ll_exti.o(i.LL_EXTI_Init) for LL_EXTI_Init
+    sleep.o(i.Sleep_Gpio) refers to sleep.o(i.LL_EXTI_SetEXTISource) for LL_EXTI_SetEXTISource
+    sleep.o(i.Sleep_Gpio) refers to sleep.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    sleep.o(i.enter_stop) refers to portscan.o(i.Get_Usb_Ad) for Get_Usb_Ad
+    sleep.o(i.enter_stop) refers to adc.o(i.adc_disable) for adc_disable
+    sleep.o(i.enter_stop) refers to sleep.o(i.Sleep_Gpio) for Sleep_Gpio
+    sleep.o(i.enter_stop) refers to sleep.o(i.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    sleep.o(i.enter_stop) refers to lptim.o(i.lptim_start) for lptim_start
+    sleep.o(i.enter_stop) refers to baterry.o(i.BatVoltage) for BatVoltage
+    sleep.o(i.enter_stop) refers to sleep.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    sleep.o(i.enter_stop) refers to aip33a06.o(i.sysinit) for sysinit
+    sleep.o(i.enter_stop) refers to sleep.o(i.LL_APB1_GRP2_EnableClock) for LL_APB1_GRP2_EnableClock
+    sleep.o(i.enter_stop) refers to baterry.o(.bss) for BatInfo
+    sleep.o(i.enter_stop) refers to sleep.o(.data) for .data
+    sleep.o(i.enter_stop) refers to main.o(.ARM.__AT_0x20000A10) for Bat_Leve
+    sleep.o(i.enter_stop) refers to disp.o(.data) for Smg_Paoma_En
+    aip33a06.o(i.AiP33A06_ACK) refers to aip33a06.o(i.LL_GPIO_SetPinMode) for LL_GPIO_SetPinMode
+    aip33a06.o(i.AiP33A06_ACK) refers to aip33a06.o(i._delay_us) for _delay_us
+    aip33a06.o(i.AiP33A06_writebyte) refers to aip33a06.o(i._delay_us) for _delay_us
+    aip33a06.o(i.AiP33A06_writebyte) refers to aip33a06.o(i.AiP33A06_ACK) for AiP33A06_ACK
+    aip33a06.o(i.AiP33A06_writecmd) refers to aip33a06.o(i.iic_start) for iic_start
+    aip33a06.o(i.AiP33A06_writecmd) refers to aip33a06.o(i.AiP33A06_writebyte) for AiP33A06_writebyte
+    aip33a06.o(i.AiP33A06_writecmd) refers to aip33a06.o(i.iic_stop) for iic_stop
+    aip33a06.o(i.Ram_Clear) refers to aip33a06.o(i.AiP33A06_writecmd) for AiP33A06_writecmd
+    aip33a06.o(i.Ram_Clear) refers to aip33a06.o(i.iic_start) for iic_start
+    aip33a06.o(i.Ram_Clear) refers to aip33a06.o(i.AiP33A06_writebyte) for AiP33A06_writebyte
+    aip33a06.o(i.Ram_Clear) refers to aip33a06.o(i.iic_stop) for iic_stop
+    aip33a06.o(i.delay_ms) refers to aip33a06.o(i._delay_us) for _delay_us
+    aip33a06.o(i.dis_Wakeup) refers to aip33a06.o(i.AiP33A06_writecmd) for AiP33A06_writecmd
+    aip33a06.o(i.dis_sleep) refers to aip33a06.o(i.Ram_Clear) for Ram_Clear
+    aip33a06.o(i.dis_sleep) refers to aip33a06.o(i.AiP33A06_writecmd) for AiP33A06_writecmd
+    aip33a06.o(i.display) refers to aip33a06.o(i.iic_start) for iic_start
+    aip33a06.o(i.display) refers to aip33a06.o(i.AiP33A06_writebyte) for AiP33A06_writebyte
+    aip33a06.o(i.display) refers to aip33a06.o(i.iic_stop) for iic_stop
+    aip33a06.o(i.iic_start) refers to aip33a06.o(i._delay_us) for _delay_us
+    aip33a06.o(i.iic_stop) refers to aip33a06.o(i._delay_us) for _delay_us
+    aip33a06.o(i.sysinit) refers to aip33a06.o(i.AiP33A06_writecmd) for AiP33A06_writecmd
+    aip33a06.o(i.write_data) refers to aip33a06.o(i.AiP33A06_writecmd) for AiP33A06_writecmd
+    aip33a06.o(i.write_data) refers to aip33a06.o(i.iic_start) for iic_start
+    aip33a06.o(i.write_data) refers to aip33a06.o(i.AiP33A06_writebyte) for AiP33A06_writebyte
+    aip33a06.o(i.write_data) refers to aip33a06.o(i.iic_stop) for iic_stop
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    ffltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ffltui.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ffixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_py32c642xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_py32c642xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_py32c642.o(.rev16_text), (4 bytes).
+    Removing system_py32c642.o(.revsh_text), (4 bytes).
+    Removing system_py32c642.o(i.SystemCoreClockUpdate), (108 bytes).
+    Removing system_py32c642.o(.constdata), (96 bytes).
+    Removing system_py32c642.o(.constdata), (32 bytes).
+    Removing startup_py32c642xx.o(HEAP), (0 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.data), (6 bytes).
+    Removing main.o(.data), (3 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing main.o(.data), (1 bytes).
+    Removing py32c642_it.o(.rev16_text), (4 bytes).
+    Removing py32c642_it.o(.revsh_text), (4 bytes).
+    Removing py32c642xx_ll_start_kit.o(.rev16_text), (4 bytes).
+    Removing py32c642xx_ll_start_kit.o(.revsh_text), (4 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_GetVersion), (6 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_LED_DeInit), (36 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_LED_Init), (44 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_LED_Off), (24 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_LED_On), (24 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_LED_Toggle), (28 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_PB_DeInit), (52 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_PB_GetState), (36 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.BSP_PB_Init), (192 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.LL_GPIO_SetPinMode), (20 bytes).
+    Removing py32c642xx_ll_start_kit.o(i.LL_IOP_GRP1_EnableClock), (24 bytes).
+    Removing py32c642xx_ll_start_kit.o(.constdata), (12 bytes).
+    Removing py32c642xx_ll_start_kit.o(.data), (8 bytes).
+    Removing py32c642_ll_adc.o(.rev16_text), (4 bytes).
+    Removing py32c642_ll_adc.o(.revsh_text), (4 bytes).
+    Removing py32c642_ll_adc.o(i.LL_ADC_CommonDeInit), (28 bytes).
+    Removing py32c642_ll_adc.o(i.LL_ADC_DeInit), (228 bytes).
+    Removing py32c642_ll_adc.o(i.LL_ADC_REG_StructInit), (16 bytes).
+    Removing py32c642_ll_adc.o(i.LL_ADC_StructInit), (16 bytes).
+    Removing py32c642_ll_gpio.o(.rev16_text), (4 bytes).
+    Removing py32c642_ll_gpio.o(.revsh_text), (4 bytes).
+    Removing py32c642_ll_gpio.o(i.LL_GPIO_DeInit), (92 bytes).
+    Removing py32c642_ll_gpio.o(i.LL_GPIO_Init), (168 bytes).
+    Removing py32c642_ll_gpio.o(i.LL_GPIO_StructInit), (24 bytes).
+    Removing py32c642_ll_rcc.o(.rev16_text), (4 bytes).
+    Removing py32c642_ll_rcc.o(.revsh_text), (4 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_DeInit), (72 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockFreq), (80 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_GetCOMPClockSource), (16 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_GetLPTIMClockFreq), (92 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_GetLSCClockFreq), (56 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_GetMCOClockFreq), (160 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_GetSystemClocksFreq), (24 bytes).
+    Removing py32c642_ll_rcc.o(i.LL_RCC_LSI_GetFreq), (60 bytes).
+    Removing py32c642_ll_rcc.o(i.RCC_GetHCLKClockFreq), (36 bytes).
+    Removing py32c642_ll_rcc.o(i.RCC_GetPCLK1ClockFreq), (36 bytes).
+    Removing py32c642_ll_rcc.o(i.RCC_GetSystemClockFreq), (72 bytes).
+    Removing py32c642_ll_utils.o(.rev16_text), (4 bytes).
+    Removing py32c642_ll_utils.o(.revsh_text), (4 bytes).
+    Removing py32c642_ll_utils.o(i.LL_SetFlashLatency), (72 bytes).
+    Removing py32c642_ll_exti.o(.rev16_text), (4 bytes).
+    Removing py32c642_ll_exti.o(.revsh_text), (4 bytes).
+    Removing py32c642_ll_exti.o(i.LL_EXTI_DeInit), (40 bytes).
+    Removing py32c642_ll_exti.o(i.LL_EXTI_Init), (188 bytes).
+    Removing py32c642_ll_exti.o(i.LL_EXTI_StructInit), (14 bytes).
+    Removing py32c642_hal_flash.o(.rev16_text), (4 bytes).
+    Removing py32c642_hal_flash.o(.revsh_text), (4 bytes).
+    Removing py32c642_hal_flash.o(i.FLASH_MassErase), (36 bytes).
+    Removing py32c642_hal_flash.o(i.FLASH_PageErase), (32 bytes).
+    Removing py32c642_hal_flash.o(i.FLASH_Program_Page), (60 bytes).
+    Removing py32c642_hal_flash.o(i.FLASH_SectorErase), (20 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback), (2 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_Erase), (432 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_Erase_IT), (316 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_GetError), (12 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_IRQHandler), (180 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_OBBOOTGetConfig), (28 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_OBBOOTProgram), (280 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_OBGetConfig), (48 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_OperationErrorCallback), (2 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_PageProgram), (14 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_PageProgram_IT), (14 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_Program), (276 bytes).
+    Removing py32c642_hal_flash.o(i.HAL_FLASH_Program_IT), (272 bytes).
+    Removing py32c642_hal.o(.rev16_text), (4 bytes).
+    Removing py32c642_hal.o(.revsh_text), (4 bytes).
+    Removing py32c642_hal.o(i.HAL_DBGMCU_DisableDBGMCUStopMode), (16 bytes).
+    Removing py32c642_hal.o(i.HAL_DBGMCU_EnableDBGMCUStopMode), (16 bytes).
+    Removing py32c642_hal.o(i.HAL_DeInit), (40 bytes).
+    Removing py32c642_hal.o(i.HAL_Delay), (36 bytes).
+    Removing py32c642_hal.o(i.HAL_GetDEVID), (16 bytes).
+    Removing py32c642_hal.o(i.HAL_GetHalVersion), (6 bytes).
+    Removing py32c642_hal.o(i.HAL_GetREVID), (12 bytes).
+    Removing py32c642_hal.o(i.HAL_GetTickFreq), (12 bytes).
+    Removing py32c642_hal.o(i.HAL_GetTickPrio), (12 bytes).
+    Removing py32c642_hal.o(i.HAL_GetUIDw0), (12 bytes).
+    Removing py32c642_hal.o(i.HAL_GetUIDw1), (12 bytes).
+    Removing py32c642_hal.o(i.HAL_GetUIDw2), (12 bytes).
+    Removing py32c642_hal.o(i.HAL_IncTick), (16 bytes).
+    Removing py32c642_hal.o(i.HAL_Init), (26 bytes).
+    Removing py32c642_hal.o(i.HAL_InitTick), (80 bytes).
+    Removing py32c642_hal.o(i.HAL_MspDeInit), (2 bytes).
+    Removing py32c642_hal.o(i.HAL_MspInit), (2 bytes).
+    Removing py32c642_hal.o(i.HAL_ResumeTick), (16 bytes).
+    Removing py32c642_hal.o(i.HAL_SYSCFG_DisableGPIONoiseFilter), (64 bytes).
+    Removing py32c642_hal.o(i.HAL_SYSCFG_EnableGPIONoiseFilter), (64 bytes).
+    Removing py32c642_hal.o(i.HAL_SYSCFG_GetRemapMemory), (16 bytes).
+    Removing py32c642_hal.o(i.HAL_SYSCFG_GetTIM1CH1Source), (16 bytes).
+    Removing py32c642_hal.o(i.HAL_SYSCFG_SetRemapMemory), (20 bytes).
+    Removing py32c642_hal.o(i.HAL_SYSCFG_SetTIM1CH1Source), (20 bytes).
+    Removing py32c642_hal.o(i.HAL_SYSCFG_TIM1ETRSource), (20 bytes).
+    Removing py32c642_hal.o(i.HAL_SetTickFreq), (32 bytes).
+    Removing py32c642_hal.o(i.HAL_SuspendTick), (16 bytes).
+    Removing py32c642_hal_cortex.o(.rev16_text), (4 bytes).
+    Removing py32c642_hal_cortex.o(.revsh_text), (4 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_ClearPendingIRQ), (20 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_DisableIRQ), (20 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_EnableIRQ), (20 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_GetPendingIRQ), (28 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_GetPriority), (60 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_SetPendingIRQ), (20 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_SetPriority), (8 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_NVIC_SystemReset), (28 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig), (28 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_SYSTICK_Callback), (2 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_SYSTICK_Config), (48 bytes).
+    Removing py32c642_hal_cortex.o(i.HAL_SYSTICK_IRQHandler), (8 bytes).
+    Removing py32c642_hal_cortex.o(i.NVIC_SetPriority), (68 bytes).
+    Removing py32c642_ll_tim.o(.rev16_text), (4 bytes).
+    Removing py32c642_ll_tim.o(.revsh_text), (4 bytes).
+    Removing py32c642_ll_tim.o(i.IC1Config), (50 bytes).
+    Removing py32c642_ll_tim.o(i.IC2Config), (54 bytes).
+    Removing py32c642_ll_tim.o(i.IC3Config), (56 bytes).
+    Removing py32c642_ll_tim.o(i.IC4Config), (56 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_BDTR_Init), (74 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_BDTR_StructInit), (18 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_DeInit), (68 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_ENCODER_Init), (96 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_ENCODER_StructInit), (28 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_HALLSENSOR_Init), (96 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_HALLSENSOR_StructInit), (12 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_IC_Init), (64 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_IC_StructInit), (16 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_OC_Init), (64 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_OC_StructInit), (20 bytes).
+    Removing py32c642_ll_tim.o(i.LL_TIM_StructInit), (16 bytes).
+    Removing py32c642_ll_tim.o(i.OC1Config), (120 bytes).
+    Removing py32c642_ll_tim.o(i.OC2Config), (132 bytes).
+    Removing py32c642_ll_tim.o(i.OC3Config), (132 bytes).
+    Removing py32c642_ll_tim.o(i.OC4Config), (100 bytes).
+    Removing py32c642_ll_lptim.o(.rev16_text), (4 bytes).
+    Removing py32c642_ll_lptim.o(.revsh_text), (4 bytes).
+    Removing py32c642_ll_lptim.o(i.LL_LPTIM_DeInit), (44 bytes).
+    Removing py32c642_ll_lptim.o(i.LL_LPTIM_StructInit), (8 bytes).
+    Removing adc.o(.rev16_text), (4 bytes).
+    Removing adc.o(.revsh_text), (4 bytes).
+    Removing adc.o(i.Adc_CalBatRef), (168 bytes).
+    Removing adc.o(i.Bcd2ToByte), (16 bytes).
+    Removing adc.o(i.GetADCValue), (60 bytes).
+    Removing adc.o(i.GetAverageADCValue), (40 bytes).
+    Removing adc.o(i.LL_GPIO_SetPinMode), (20 bytes).
+    Removing adc.o(i.adc_channel_config), (200 bytes).
+    Removing adc.o(i.adc_channels_config), (224 bytes).
+    Removing adc.o(i.adc_disable), (24 bytes).
+    Removing adc.o(i.adc_dr), (28 bytes).
+    Removing adc.o(i.adc_enable), (32 bytes).
+    Removing adc.o(i.adc_start), (24 bytes).
+    Removing adc.o(i.adc_vcc), (24 bytes).
+    Removing adc.o(.data), (8 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(i.key_init), (2 bytes).
+    Removing gpio.o(i.led_init), (2 bytes).
+    Removing pwr.o(.rev16_text), (4 bytes).
+    Removing pwr.o(.revsh_text), (4 bytes).
+    Removing pwr.o(i.pwr_init_jcq), (212 bytes).
+    Removing flash.o(.rev16_text), (4 bytes).
+    Removing flash.o(.revsh_text), (4 bytes).
+    Removing flash.o(i.Flash_Blank), (32 bytes).
+    Removing flash.o(i.Flash_Erase), (56 bytes).
+    Removing flash.o(i.Flash_Program), (44 bytes).
+    Removing flash.o(i.Flash_Verity), (44 bytes).
+    Removing flash.o(i.flash_Read_User_Data), (16 bytes).
+    Removing flash.o(i.flash_Write_User_Data), (30 bytes).
+    Removing flash.o(.bss), (128 bytes).
+    Removing tim.o(.rev16_text), (4 bytes).
+    Removing tim.o(.revsh_text), (4 bytes).
+    Removing tim.o(i.timer1_pwm), (112 bytes).
+    Removing lptim.o(.rev16_text), (4 bytes).
+    Removing lptim.o(.revsh_text), (4 bytes).
+    Removing disp.o(.rev16_text), (4 bytes).
+    Removing disp.o(.revsh_text), (4 bytes).
+    Removing disp.o(i.DISP_Deal), (1824 bytes).
+    Removing disp.o(i.LL_GPIO_IsInputPinSet), (14 bytes).
+    Removing disp.o(i.LL_GPIO_SetPinMode), (20 bytes).
+    Removing disp.o(i.Set_Disp_Num), (92 bytes).
+    Removing disp.o(i.Smok_Disp_Deal), (1664 bytes).
+    Removing disp.o(i.delay), (8 bytes).
+    Removing disp.o(i.display_Bat_logo), (22 bytes).
+    Removing disp.o(i.display_Oil_logo), (12 bytes).
+    Removing disp.o(i.display_bat), (584 bytes).
+    Removing disp.o(i.display_bat_100), (12 bytes).
+    Removing disp.o(i.display_bat_L0), (36 bytes).
+    Removing disp.o(i.display_bat_bit0), (54 bytes).
+    Removing disp.o(i.display_bat_bit1), (22 bytes).
+    Removing disp.o(i.display_bat_bit2), (46 bytes).
+    Removing disp.o(i.display_bat_bit3), (46 bytes).
+    Removing disp.o(i.display_bat_bit4), (38 bytes).
+    Removing disp.o(i.display_bat_bit5), (46 bytes).
+    Removing disp.o(i.display_bat_bit6), (54 bytes).
+    Removing disp.o(i.display_bat_bit7), (30 bytes).
+    Removing disp.o(i.display_bat_bit8), (62 bytes).
+    Removing disp.o(i.display_bat_bit9), (54 bytes).
+    Removing disp.o(i.display_bat_ten0), (54 bytes).
+    Removing disp.o(i.display_bat_ten1), (22 bytes).
+    Removing disp.o(i.display_bat_ten2), (46 bytes).
+    Removing disp.o(i.display_bat_ten3), (46 bytes).
+    Removing disp.o(i.display_bat_ten4), (38 bytes).
+    Removing disp.o(i.display_bat_ten5), (46 bytes).
+    Removing disp.o(i.display_bat_ten6), (54 bytes).
+    Removing disp.o(i.display_bat_ten7), (30 bytes).
+    Removing disp.o(i.display_bat_ten8), (62 bytes).
+    Removing disp.o(i.display_bat_ten9), (54 bytes).
+    Removing disp.o(i.display_bigstar), (34 bytes).
+    Removing disp.o(i.display_contour_in), (24 bytes).
+    Removing disp.o(i.display_contour_out), (116 bytes).
+    Removing disp.o(i.display_dolphin), (60 bytes).
+    Removing disp.o(i.display_oil), (408 bytes).
+    Removing disp.o(i.display_oil_100), (12 bytes).
+    Removing disp.o(i.display_oil_L0), (36 bytes).
+    Removing disp.o(i.display_oil_bit0), (54 bytes).
+    Removing disp.o(i.display_oil_bit1), (22 bytes).
+    Removing disp.o(i.display_oil_bit2), (46 bytes).
+    Removing disp.o(i.display_oil_bit3), (46 bytes).
+    Removing disp.o(i.display_oil_bit4), (38 bytes).
+    Removing disp.o(i.display_oil_bit5), (46 bytes).
+    Removing disp.o(i.display_oil_bit6), (54 bytes).
+    Removing disp.o(i.display_oil_bit7), (30 bytes).
+    Removing disp.o(i.display_oil_bit8), (62 bytes).
+    Removing disp.o(i.display_oil_bit9), (54 bytes).
+    Removing disp.o(i.display_oil_ten0), (54 bytes).
+    Removing disp.o(i.display_oil_ten1), (22 bytes).
+    Removing disp.o(i.display_oil_ten2), (46 bytes).
+    Removing disp.o(i.display_oil_ten3), (46 bytes).
+    Removing disp.o(i.display_oil_ten4), (38 bytes).
+    Removing disp.o(i.display_oil_ten5), (46 bytes).
+    Removing disp.o(i.display_oil_ten6), (54 bytes).
+    Removing disp.o(i.display_oil_ten7), (30 bytes).
+    Removing disp.o(i.display_oil_ten8), (62 bytes).
+    Removing disp.o(i.display_oil_ten9), (54 bytes).
+    Removing disp.o(i.display_star), (100 bytes).
+    Removing disp.o(i.display_version), (58 bytes).
+    Removing disp.o(i.display_yellow), (60 bytes).
+    Removing disp.o(.bss), (84 bytes).
+    Removing disp.o(.constdata), (44 bytes).
+    Removing disp.o(.constdata), (44 bytes).
+    Removing disp.o(.constdata), (44 bytes).
+    Removing disp.o(.constdata), (44 bytes).
+    Removing disp.o(.data), (164 bytes).
+    Removing sys.o(.rev16_text), (4 bytes).
+    Removing sys.o(.revsh_text), (4 bytes).
+    Removing sys.o(i.Sys_Init), (36 bytes).
+    Removing out.o(.rev16_text), (4 bytes).
+    Removing out.o(.revsh_text), (4 bytes).
+    Removing out.o(i.ClrShortData), (20 bytes).
+    Removing out.o(i.Get_Out_Volt), (48 bytes).
+    Removing out.o(i.Interrup_Ctr_Mos_Deal), (108 bytes).
+    Removing out.o(i.Out_Deal), (1488 bytes).
+    Removing out.o(i.SetShortData), (28 bytes).
+    Removing out.o(i.ShortIsData), (40 bytes).
+    Removing portscan.o(.rev16_text), (4 bytes).
+    Removing portscan.o(.revsh_text), (4 bytes).
+    Removing portscan.o(i.Get_Usb_Ad), (28 bytes).
+    Removing portscan.o(i.LL_GPIO_IsInputPinSet), (14 bytes).
+    Removing portscan.o(i.LL_GPIO_SetPinMode), (20 bytes).
+    Removing portscan.o(i.Out_Stop), (148 bytes).
+    Removing portscan.o(i.Port_Scan), (476 bytes).
+    Removing portscan.o(i.Power_Reset_Port_Scan), (76 bytes).
+    Removing baterry.o(.rev16_text), (4 bytes).
+    Removing baterry.o(.revsh_text), (4 bytes).
+    Removing baterry.o(i.BatVoltage), (36 bytes).
+    Removing baterry.o(i.Get_Bat_Leve), (292 bytes).
+    Removing baterry.o(i.Get_Bat_Leve_Map), (4 bytes).
+    Removing baterry.o(i.Get_Power_Rest_BatLeve), (116 bytes).
+    Removing baterry.o(i.Smok_Start_Bat_Leve_Deal), (84 bytes).
+    Removing baterry.o(.bss), (64 bytes).
+    Removing baterry.o(.constdata), (400 bytes).
+    Removing baterry.o(.constdata), (20 bytes).
+    Removing baterry.o(.constdata), (24 bytes).
+    Removing baterry.o(.constdata), (24 bytes).
+    Removing baterry.o(.data), (1 bytes).
+    Removing sleep.o(.rev16_text), (4 bytes).
+    Removing sleep.o(.revsh_text), (4 bytes).
+    Removing sleep.o(i.Gpio_Wake), (336 bytes).
+    Removing sleep.o(i.LL_APB1_GRP2_EnableClock), (24 bytes).
+    Removing sleep.o(i.LL_EXTI_SetEXTISource), (36 bytes).
+    Removing sleep.o(i.LL_GPIO_IsInputPinSet), (14 bytes).
+    Removing sleep.o(i.LL_GPIO_SetPinMode), (20 bytes).
+    Removing sleep.o(i.LL_GPIO_SetPinOutputType), (12 bytes).
+    Removing sleep.o(i.LL_GPIO_SetPinPull), (20 bytes).
+    Removing sleep.o(i.LL_GPIO_SetPinSpeed), (20 bytes).
+    Removing sleep.o(i.NVIC_SetPriority), (68 bytes).
+    Removing sleep.o(i.Sleep), (228 bytes).
+    Removing sleep.o(i.Sleep_Gpio), (492 bytes).
+    Removing sleep.o(i.enter_stop), (548 bytes).
+    Removing sleep.o(.data), (8 bytes).
+    Removing switchdip.o(.rev16_text), (4 bytes).
+    Removing switchdip.o(.revsh_text), (4 bytes).
+    Removing switchdip.o(i.Switch_Init), (2 bytes).
+    Removing switchdip.o(i.Switch_Scan), (2 bytes).
+    Removing ledicrgb.o(.rev16_text), (4 bytes).
+    Removing ledicrgb.o(.revsh_text), (4 bytes).
+    Removing aip33a06.o(.rev16_text), (4 bytes).
+    Removing aip33a06.o(.revsh_text), (4 bytes).
+    Removing aip33a06.o(i.dis_Wakeup), (10 bytes).
+    Removing aip33a06.o(i.dis_sleep), (14 bytes).
+    Removing aip33a06.o(i.write_data), (56 bytes).
+    Removing fmul.o(.text), (122 bytes).
+    Removing dadd.o(.text), (360 bytes).
+    Removing dmul.o(.text), (208 bytes).
+    Removing ddiv.o(.text), (240 bytes).
+    Removing ffltui.o(.text), (14 bytes).
+    Removing dflti.o(.text), (40 bytes).
+    Removing dfltui.o(.text), (28 bytes).
+    Removing ffixui.o(.text), (40 bytes).
+    Removing dfixui.o(.text), (60 bytes).
+    Removing f2d.o(.text), (40 bytes).
+    Removing d2f.o(.text), (56 bytes).
+    Removing fepilogue.o(.text), (130 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+    Removing adc.o(i.__ARM_common_switch8), (26 bytes).
+    Removing depilogue.o(i.__ARM_clz), (46 bytes).
+
+330 unused section(s) (total 22974 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixui.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  ffltui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\Drivers\BSP\PY32C642xx_Start_Kit\py32c642xx_ll_Start_Kit.c 0x00000000   Number         0  py32c642xx_ll_start_kit.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_hal.c 0x00000000   Number         0  py32c642_hal.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_hal_cortex.c 0x00000000   Number         0  py32c642_hal_cortex.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_hal_flash.c 0x00000000   Number         0  py32c642_hal_flash.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_ll_adc.c 0x00000000   Number         0  py32c642_ll_adc.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_ll_exti.c 0x00000000   Number         0  py32c642_ll_exti.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_ll_gpio.c 0x00000000   Number         0  py32c642_ll_gpio.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_ll_lptim.c 0x00000000   Number         0  py32c642_ll_lptim.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_ll_rcc.c 0x00000000   Number         0  py32c642_ll_rcc.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_ll_tim.c 0x00000000   Number         0  py32c642_ll_tim.o ABSOLUTE
+    ..\..\Drivers\PY32C642_HAL_Driver\Src\py32c642_ll_utils.c 0x00000000   Number         0  py32c642_ll_utils.o ABSOLUTE
+    ..\..\User\ADC.c                         0x00000000   Number         0  adc.o ABSOLUTE
+    ..\..\User\AiP33A06.c                    0x00000000   Number         0  aip33a06.o ABSOLUTE
+    ..\..\User\Disp.c                        0x00000000   Number         0  disp.o ABSOLUTE
+    ..\..\User\FLASH.c                       0x00000000   Number         0  flash.o ABSOLUTE
+    ..\..\User\GPIO.c                        0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\..\User\LPTIM.c                       0x00000000   Number         0  lptim.o ABSOLUTE
+    ..\..\User\PWR.c                         0x00000000   Number         0  pwr.o ABSOLUTE
+    ..\..\User\Sleep.c                       0x00000000   Number         0  sleep.o ABSOLUTE
+    ..\..\User\SwitchDip.c                   0x00000000   Number         0  switchdip.o ABSOLUTE
+    ..\..\User\TIM.c                         0x00000000   Number         0  tim.o ABSOLUTE
+    ..\..\User\baterry.c                     0x00000000   Number         0  baterry.o ABSOLUTE
+    ..\..\User\ledIcRgb.c                    0x00000000   Number         0  ledicrgb.o ABSOLUTE
+    ..\..\User\out.c                         0x00000000   Number         0  out.o ABSOLUTE
+    ..\..\User\portscan.c                    0x00000000   Number         0  portscan.o ABSOLUTE
+    ..\..\User\sys.c                         0x00000000   Number         0  sys.o ABSOLUTE
+    ..\Src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
+    ..\Src\py32c642_it.c                     0x00000000   Number         0  py32c642_it.o ABSOLUTE
+    ..\Src\system_py32c642.c                 0x00000000   Number         0  system_py32c642.o ABSOLUTE
+    ..\\..\\Drivers\\BSP\\PY32C642xx_Start_Kit\\py32c642xx_ll_Start_Kit.c 0x00000000   Number         0  py32c642xx_ll_start_kit.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_hal.c 0x00000000   Number         0  py32c642_hal.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_hal_cortex.c 0x00000000   Number         0  py32c642_hal_cortex.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_hal_flash.c 0x00000000   Number         0  py32c642_hal_flash.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_ll_adc.c 0x00000000   Number         0  py32c642_ll_adc.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_ll_exti.c 0x00000000   Number         0  py32c642_ll_exti.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_ll_gpio.c 0x00000000   Number         0  py32c642_ll_gpio.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_ll_lptim.c 0x00000000   Number         0  py32c642_ll_lptim.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_ll_rcc.c 0x00000000   Number         0  py32c642_ll_rcc.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_ll_tim.c 0x00000000   Number         0  py32c642_ll_tim.o ABSOLUTE
+    ..\\..\\Drivers\\PY32C642_HAL_Driver\\Src\\py32c642_ll_utils.c 0x00000000   Number         0  py32c642_ll_utils.o ABSOLUTE
+    ..\\..\\User\\ADC.c                      0x00000000   Number         0  adc.o ABSOLUTE
+    ..\\..\\User\\AiP33A06.c                 0x00000000   Number         0  aip33a06.o ABSOLUTE
+    ..\\..\\User\\Disp.c                     0x00000000   Number         0  disp.o ABSOLUTE
+    ..\\..\\User\\FLASH.c                    0x00000000   Number         0  flash.o ABSOLUTE
+    ..\\..\\User\\GPIO.c                     0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\\..\\User\\LPTIM.c                    0x00000000   Number         0  lptim.o ABSOLUTE
+    ..\\..\\User\\PWR.c                      0x00000000   Number         0  pwr.o ABSOLUTE
+    ..\\..\\User\\Sleep.c                    0x00000000   Number         0  sleep.o ABSOLUTE
+    ..\\..\\User\\SwitchDip.c                0x00000000   Number         0  switchdip.o ABSOLUTE
+    ..\\..\\User\\TIM.c                      0x00000000   Number         0  tim.o ABSOLUTE
+    ..\\..\\User\\baterry.c                  0x00000000   Number         0  baterry.o ABSOLUTE
+    ..\\..\\User\\ledIcRgb.c                 0x00000000   Number         0  ledicrgb.o ABSOLUTE
+    ..\\..\\User\\out.c                      0x00000000   Number         0  out.o ABSOLUTE
+    ..\\..\\User\\portscan.c                 0x00000000   Number         0  portscan.o ABSOLUTE
+    ..\\..\\User\\sys.c                      0x00000000   Number         0  sys.o ABSOLUTE
+    ..\\Src\\main.c                          0x00000000   Number         0  main.o ABSOLUTE
+    ..\\Src\\py32c642_it.c                   0x00000000   Number         0  py32c642_it.o ABSOLUTE
+    ..\\Src\\system_py32c642.c               0x00000000   Number         0  system_py32c642.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    startup_py32c642xx.s                     0x00000000   Number         0  startup_py32c642xx.o ABSOLUTE
+    RESET                                    0x08000000   Section      192  startup_py32c642xx.o(RESET)
+    .ARM.Collect$$$$00000000                 0x080000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x080000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x080000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x080000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x080000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x080000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000E                 0x080000d0   Section        4  entry12b.o(.ARM.Collect$$$$0000000E)
+    .ARM.Collect$$$$0000000F                 0x080000d4   Section        0  entry10a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00000011                 0x080000d4   Section        0  entry11a.o(.ARM.Collect$$$$00000011)
+    .ARM.Collect$$$$00002712                 0x080000d4   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x080000d4   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x080000d8   Section       28  startup_py32c642xx.o(.text)
+    .text                                    0x080000f4   Section        0  uidiv.o(.text)
+    .text                                    0x08000120   Section        0  memseta.o(.text)
+    .text                                    0x08000144   Section       36  init.o(.text)
+    i.APP_ErrorHandler                       0x08000168   Section        0  main.o(i.APP_ErrorHandler)
+    i.APP_SystemClockConfig                  0x0800016c   Section        0  sys.o(i.APP_SystemClockConfig)
+    i.AiP33A06_ACK                           0x080001f0   Section        0  aip33a06.o(i.AiP33A06_ACK)
+    i.AiP33A06_writebyte                     0x08000228   Section        0  aip33a06.o(i.AiP33A06_writebyte)
+    i.AiP33A06_writecmd                      0x08000264   Section        0  aip33a06.o(i.AiP33A06_writecmd)
+    i.DelayTime                              0x08000280   Section        0  system_py32c642.o(i.DelayTime)
+    DelayTime                                0x08000281   Thumb Code    20  system_py32c642.o(i.DelayTime)
+    i.EXTI0_1_IRQHandler                     0x08000298   Section        0  py32c642_it.o(i.EXTI0_1_IRQHandler)
+    i.EXTI2_3_IRQHandler                     0x080002c0   Section        0  py32c642_it.o(i.EXTI2_3_IRQHandler)
+    i.EXTI4_15_IRQHandler                    0x080002e8   Section        0  py32c642_it.o(i.EXTI4_15_IRQHandler)
+    i.FLASH_OB_OptrConfig                    0x08000310   Section        0  py32c642_hal_flash.o(i.FLASH_OB_OptrConfig)
+    FLASH_OB_OptrConfig                      0x08000311   Thumb Code    22  py32c642_hal_flash.o(i.FLASH_OB_OptrConfig)
+    i.FLASH_WaitForLastOperation             0x0800032c   Section        0  py32c642_hal_flash.o(i.FLASH_WaitForLastOperation)
+    i.Get_Oil_Leve                           0x08000360   Section        0  out.o(i.Get_Oil_Leve)
+    i.Get_Oil_Leve_Map                       0x08000394   Section        0  out.o(i.Get_Oil_Leve_Map)
+    i.Gpio_Init                              0x08000398   Section        0  gpio.o(i.Gpio_Init)
+    i.HAL_FLASH_Lock                         0x080004cc   Section        0  py32c642_hal_flash.o(i.HAL_FLASH_Lock)
+    i.HAL_FLASH_OBProgram                    0x080004e8   Section        0  py32c642_hal_flash.o(i.HAL_FLASH_OBProgram)
+    i.HAL_FLASH_OB_Launch                    0x0800061c   Section        0  py32c642_hal_flash.o(i.HAL_FLASH_OB_Launch)
+    i.HAL_FLASH_OB_Lock                      0x08000630   Section        0  py32c642_hal_flash.o(i.HAL_FLASH_OB_Lock)
+    i.HAL_FLASH_OB_Unlock                    0x0800064c   Section        0  py32c642_hal_flash.o(i.HAL_FLASH_OB_Unlock)
+    i.HAL_FLASH_Unlock                       0x08000674   Section        0  py32c642_hal_flash.o(i.HAL_FLASH_Unlock)
+    i.HAL_GetTick                            0x0800069c   Section        0  py32c642_hal.o(i.HAL_GetTick)
+    i.HardFault_Handler                      0x080006a8   Section        0  py32c642_it.o(i.HardFault_Handler)
+    i.LL_ADC_Init                            0x080006ac   Section        0  py32c642_ll_adc.o(i.LL_ADC_Init)
+    i.LL_ADC_REG_Init                        0x080006e8   Section        0  py32c642_ll_adc.o(i.LL_ADC_REG_Init)
+    i.LL_APB1_GRP2_EnableClock               0x0800071c   Section        0  tim.o(i.LL_APB1_GRP2_EnableClock)
+    LL_APB1_GRP2_EnableClock                 0x0800071d   Thumb Code    18  tim.o(i.LL_APB1_GRP2_EnableClock)
+    i.LL_EXTI_IsActiveFlag                   0x08000734   Section        0  py32c642_it.o(i.LL_EXTI_IsActiveFlag)
+    LL_EXTI_IsActiveFlag                     0x08000735   Thumb Code    16  py32c642_it.o(i.LL_EXTI_IsActiveFlag)
+    i.LL_GPIO_SetPinMode                     0x08000748   Section        0  gpio.o(i.LL_GPIO_SetPinMode)
+    LL_GPIO_SetPinMode                       0x08000749   Thumb Code    20  gpio.o(i.LL_GPIO_SetPinMode)
+    i.LL_GPIO_SetPinMode                     0x0800075c   Section        0  aip33a06.o(i.LL_GPIO_SetPinMode)
+    LL_GPIO_SetPinMode                       0x0800075d   Thumb Code    20  aip33a06.o(i.LL_GPIO_SetPinMode)
+    i.LL_GPIO_SetPinOutputType               0x08000770   Section        0  gpio.o(i.LL_GPIO_SetPinOutputType)
+    LL_GPIO_SetPinOutputType                 0x08000771   Thumb Code    12  gpio.o(i.LL_GPIO_SetPinOutputType)
+    i.LL_GPIO_SetPinPull                     0x0800077c   Section        0  gpio.o(i.LL_GPIO_SetPinPull)
+    LL_GPIO_SetPinPull                       0x0800077d   Thumb Code    20  gpio.o(i.LL_GPIO_SetPinPull)
+    i.LL_GPIO_SetPinSpeed                    0x08000790   Section        0  gpio.o(i.LL_GPIO_SetPinSpeed)
+    LL_GPIO_SetPinSpeed                      0x08000791   Thumb Code    20  gpio.o(i.LL_GPIO_SetPinSpeed)
+    i.LL_Init1msTick                         0x080007a4   Section        0  py32c642_ll_utils.o(i.LL_Init1msTick)
+    i.LL_LPTIM_Init                          0x080007c4   Section        0  py32c642_ll_lptim.o(i.LL_LPTIM_Init)
+    i.LL_SetSystemCoreClock                  0x080007f0   Section        0  py32c642_ll_utils.o(i.LL_SetSystemCoreClock)
+    i.LL_TIM_Init                            0x080007fc   Section        0  py32c642_ll_tim.o(i.LL_TIM_Init)
+    i.LL_mDelay                              0x0800084c   Section        0  py32c642_ll_utils.o(i.LL_mDelay)
+    i.NMI_Handler                            0x08000870   Section        0  py32c642_it.o(i.NMI_Handler)
+    i.NVIC_SetPriority                       0x08000874   Section        0  tim.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x08000875   Thumb Code    60  tim.o(i.NVIC_SetPriority)
+    i.PendSV_Handler                         0x080008b8   Section        0  py32c642_it.o(i.PendSV_Handler)
+    i.Ram_Clear                              0x080008ba   Section        0  aip33a06.o(i.Ram_Clear)
+    i.SVC_Handler                            0x080008e6   Section        0  py32c642_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x080008e8   Section        0  py32c642_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x080008ec   Section        0  system_py32c642.o(i.SystemInit)
+    i.TIM14_IRQHandler                       0x08000930   Section        0  py32c642_it.o(i.TIM14_IRQHandler)
+    i.TIM1_BRK_UP_TRG_COM_IRQHandler         0x08000a98   Section        0  py32c642_it.o(i.TIM1_BRK_UP_TRG_COM_IRQHandler)
+    i.__scatterload_copy                     0x08000ab8   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000ac6   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000ac8   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._delay_us                              0x08000ad6   Section        0  aip33a06.o(i._delay_us)
+    i.adc_init                               0x08000ae4   Section        0  adc.o(i.adc_init)
+    i.delay_ms                               0x08000b78   Section        0  aip33a06.o(i.delay_ms)
+    i.delay_us                               0x08000b94   Section        0  adc.o(i.delay_us)
+    i.display                                0x08000bae   Section        0  aip33a06.o(i.display)
+    i.iic_start                              0x08000bd8   Section        0  aip33a06.o(i.iic_start)
+    i.iic_stop                               0x08000bf8   Section        0  aip33a06.o(i.iic_stop)
+    i.iwdg_init                              0x08000c14   Section        0  pwr.o(i.iwdg_init)
+    i.lptim_init                             0x08000c68   Section        0  lptim.o(i.lptim_init)
+    i.lptim_start                            0x08000cf0   Section        0  lptim.o(i.lptim_start)
+    i.main                                   0x08000d2c   Section        0  main.o(i.main)
+    i.option_init                            0x08000d7c   Section        0  pwr.o(i.option_init)
+    i.sysinit                                0x08000dd8   Section        0  aip33a06.o(i.sysinit)
+    i.timer14_init                           0x08000e0c   Section        0  tim.o(i.timer14_init)
+    i.timer1_init                            0x08000e6c   Section        0  tim.o(i.timer1_init)
+    .constdata                               0x08000ed4   Section       32  py32c642_hal_flash.o(.constdata)
+    .data                                    0x20000000   Section        4  system_py32c642.o(.data)
+    .data                                    0x20000004   Section        1  main.o(.data)
+    .data                                    0x20000008   Section       12  py32c642_hal.o(.data)
+    .data                                    0x20000014   Section        2  switchdip.o(.data)
+    .bss                                     0x20000018   Section       24  py32c642_hal_flash.o(.bss)
+    .bss                                     0x20000030   Section        9  sys.o(.bss)
+    .bss                                     0x2000003c   Section       60  out.o(.bss)
+    .bss                                     0x20000078   Section       12  portscan.o(.bss)
+    STACK                                    0x20000088   Section     1024  startup_py32c642xx.o(STACK)
+    .ARM.__AT_0x20000A00                     0x20000a00   Section        4  main.o(.ARM.__AT_0x20000A00)
+    .ARM.__AT_0x20000A10                     0x20000a10   Section        1  main.o(.ARM.__AT_0x20000A10)
+    .ARM.__AT_0x20000A20                     0x20000a20   Section        1  main.o(.ARM.__AT_0x20000A20)
+    .ARM.__AT_0x20000A30                     0x20000a30   Section        4  main.o(.ARM.__AT_0x20000A30)
+    .ARM.__AT_0x20000A40                     0x20000a40   Section        4  main.o(.ARM.__AT_0x20000A40)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __arm_fini_                               - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x000000c0   Number         0  startup_py32c642xx.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_py32c642xx.o(RESET)
+    __Vectors_End                            0x080000c0   Data           0  startup_py32c642xx.o(RESET)
+    __main                                   0x080000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x080000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x080000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x080000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x080000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x080000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x080000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_lib_shutdown_fini                   0x080000d1   Thumb Code     0  entry12b.o(.ARM.Collect$$$$0000000E)
+    __rt_final_cpp                           0x080000d5   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000F)
+    __rt_final_exit                          0x080000d5   Thumb Code     0  entry11a.o(.ARM.Collect$$$$00000011)
+    Reset_Handler                            0x080000d9   Thumb Code     8  startup_py32c642xx.o(.text)
+    ADC_COMP_IRQHandler                      0x080000eb   Thumb Code     0  startup_py32c642xx.o(.text)
+    FLASH_IRQHandler                         0x080000eb   Thumb Code     0  startup_py32c642xx.o(.text)
+    LPTIM1_IRQHandler                        0x080000eb   Thumb Code     0  startup_py32c642xx.o(.text)
+    RCC_IRQHandler                           0x080000eb   Thumb Code     0  startup_py32c642xx.o(.text)
+    TIM1_CC_IRQHandler                       0x080000eb   Thumb Code     0  startup_py32c642xx.o(.text)
+    __aeabi_uidiv                            0x080000f5   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x080000f5   Thumb Code    44  uidiv.o(.text)
+    __aeabi_memset                           0x08000121   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x08000121   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x08000121   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x0800012f   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x0800012f   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x0800012f   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x08000133   Thumb Code    18  memseta.o(.text)
+    __scatterload                            0x08000145   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x08000145   Thumb Code     0  init.o(.text)
+    APP_ErrorHandler                         0x08000169   Thumb Code     2  main.o(i.APP_ErrorHandler)
+    APP_SystemClockConfig                    0x0800016d   Thumb Code   118  sys.o(i.APP_SystemClockConfig)
+    AiP33A06_ACK                             0x080001f1   Thumb Code    50  aip33a06.o(i.AiP33A06_ACK)
+    AiP33A06_writebyte                       0x08000229   Thumb Code    56  aip33a06.o(i.AiP33A06_writebyte)
+    AiP33A06_writecmd                        0x08000265   Thumb Code    26  aip33a06.o(i.AiP33A06_writecmd)
+    EXTI0_1_IRQHandler                       0x08000299   Thumb Code    34  py32c642_it.o(i.EXTI0_1_IRQHandler)
+    EXTI2_3_IRQHandler                       0x080002c1   Thumb Code    34  py32c642_it.o(i.EXTI2_3_IRQHandler)
+    EXTI4_15_IRQHandler                      0x080002e9   Thumb Code    34  py32c642_it.o(i.EXTI4_15_IRQHandler)
+    FLASH_WaitForLastOperation               0x0800032d   Thumb Code    42  py32c642_hal_flash.o(i.FLASH_WaitForLastOperation)
+    Get_Oil_Leve                             0x08000361   Thumb Code    40  out.o(i.Get_Oil_Leve)
+    Get_Oil_Leve_Map                         0x08000395   Thumb Code     4  out.o(i.Get_Oil_Leve_Map)
+    Gpio_Init                                0x08000399   Thumb Code   294  gpio.o(i.Gpio_Init)
+    HAL_FLASH_Lock                           0x080004cd   Thumb Code    22  py32c642_hal_flash.o(i.HAL_FLASH_Lock)
+    HAL_FLASH_OBProgram                      0x080004e9   Thumb Code   286  py32c642_hal_flash.o(i.HAL_FLASH_OBProgram)
+    HAL_FLASH_OB_Launch                      0x0800061d   Thumb Code    16  py32c642_hal_flash.o(i.HAL_FLASH_OB_Launch)
+    HAL_FLASH_OB_Lock                        0x08000631   Thumb Code    22  py32c642_hal_flash.o(i.HAL_FLASH_OB_Lock)
+    HAL_FLASH_OB_Unlock                      0x0800064d   Thumb Code    28  py32c642_hal_flash.o(i.HAL_FLASH_OB_Unlock)
+    HAL_FLASH_Unlock                         0x08000675   Thumb Code    28  py32c642_hal_flash.o(i.HAL_FLASH_Unlock)
+    HAL_GetTick                              0x0800069d   Thumb Code     6  py32c642_hal.o(i.HAL_GetTick)
+    HardFault_Handler                        0x080006a9   Thumb Code     2  py32c642_it.o(i.HardFault_Handler)
+    LL_ADC_Init                              0x080006ad   Thumb Code    54  py32c642_ll_adc.o(i.LL_ADC_Init)
+    LL_ADC_REG_Init                          0x080006e9   Thumb Code    46  py32c642_ll_adc.o(i.LL_ADC_REG_Init)
+    LL_Init1msTick                           0x080007a5   Thumb Code    26  py32c642_ll_utils.o(i.LL_Init1msTick)
+    LL_LPTIM_Init                            0x080007c5   Thumb Code    38  py32c642_ll_lptim.o(i.LL_LPTIM_Init)
+    LL_SetSystemCoreClock                    0x080007f1   Thumb Code     6  py32c642_ll_utils.o(i.LL_SetSystemCoreClock)
+    LL_TIM_Init                              0x080007fd   Thumb Code    72  py32c642_ll_tim.o(i.LL_TIM_Init)
+    LL_mDelay                                0x0800084d   Thumb Code    30  py32c642_ll_utils.o(i.LL_mDelay)
+    NMI_Handler                              0x08000871   Thumb Code     2  py32c642_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x080008b9   Thumb Code     2  py32c642_it.o(i.PendSV_Handler)
+    Ram_Clear                                0x080008bb   Thumb Code    44  aip33a06.o(i.Ram_Clear)
+    SVC_Handler                              0x080008e7   Thumb Code     2  py32c642_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x080008e9   Thumb Code     2  py32c642_it.o(i.SysTick_Handler)
+    SystemInit                               0x080008ed   Thumb Code    50  system_py32c642.o(i.SystemInit)
+    TIM14_IRQHandler                         0x08000931   Thumb Code   332  py32c642_it.o(i.TIM14_IRQHandler)
+    TIM1_BRK_UP_TRG_COM_IRQHandler           0x08000a99   Thumb Code    26  py32c642_it.o(i.TIM1_BRK_UP_TRG_COM_IRQHandler)
+    __scatterload_copy                       0x08000ab9   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000ac7   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000ac9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    _delay_us                                0x08000ad7   Thumb Code    12  aip33a06.o(i._delay_us)
+    adc_init                                 0x08000ae5   Thumb Code   138  adc.o(i.adc_init)
+    delay_ms                                 0x08000b79   Thumb Code    28  aip33a06.o(i.delay_ms)
+    delay_us                                 0x08000b95   Thumb Code    26  adc.o(i.delay_us)
+    display                                  0x08000baf   Thumb Code    40  aip33a06.o(i.display)
+    iic_start                                0x08000bd9   Thumb Code    26  aip33a06.o(i.iic_start)
+    iic_stop                                 0x08000bf9   Thumb Code    22  aip33a06.o(i.iic_stop)
+    iwdg_init                                0x08000c15   Thumb Code    60  pwr.o(i.iwdg_init)
+    lptim_init                               0x08000c69   Thumb Code   124  lptim.o(i.lptim_init)
+    lptim_start                              0x08000cf1   Thumb Code    56  lptim.o(i.lptim_start)
+    main                                     0x08000d2d   Thumb Code    76  main.o(i.main)
+    option_init                              0x08000d7d   Thumb Code    86  pwr.o(i.option_init)
+    sysinit                                  0x08000dd9   Thumb Code    52  aip33a06.o(i.sysinit)
+    timer14_init                             0x08000e0d   Thumb Code    86  tim.o(i.timer14_init)
+    timer1_init                              0x08000e6d   Thumb Code    96  tim.o(i.timer1_init)
+    _FlashTimmingParam                       0x08000ed4   Data          32  py32c642_hal_flash.o(.constdata)
+    Region$$Table$$Base                      0x08000ef4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000f14   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_py32c642.o(.data)
+    tim_flag                                 0x20000004   Data           1  main.o(.data)
+    uwTickPrio                               0x20000008   Data           4  py32c642_hal.o(.data)
+    uwTickFreq                               0x2000000c   Data           4  py32c642_hal.o(.data)
+    uwTick                                   0x20000010   Data           4  py32c642_hal.o(.data)
+    swInfo                                   0x20000014   Data           2  switchdip.o(.data)
+    pFlash                                   0x20000018   Data          24  py32c642_hal_flash.o(.bss)
+    SysInfo                                  0x20000030   Data           9  sys.o(.bss)
+    OutInfo                                  0x2000003c   Data          60  out.o(.bss)
+    ScanInfo                                 0x20000078   Data          12  portscan.o(.bss)
+    __initial_sp                             0x20000488   Data           0  startup_py32c642xx.o(STACK)
+    Out_Oil_Time                             0x20000a00   Data           4  main.o(.ARM.__AT_0x20000A00)
+    Bat_Leve                                 0x20000a10   Data           1  main.o(.ARM.__AT_0x20000A10)
+    Oil_Leve                                 0x20000a20   Data           1  main.o(.ARM.__AT_0x20000A20)
+    Short_Reset_Flag                         0x20000a30   Data           4  main.o(.ARM.__AT_0x20000A30)
+    Short_Reset_Flag1                        0x20000a40   Data           4  main.o(.ARM.__AT_0x20000A40)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000c1
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000f2c, Max: 0x00006000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000f14, Max: 0x00006000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000c0   Data   RO           66    RESET               startup_py32c642xx.o
+    0x080000c0   0x080000c0   0x00000000   Code   RO         2610  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x080000c0   0x080000c0   0x00000004   Code   RO         2639    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x080000c4   0x080000c4   0x00000004   Code   RO         2642    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         2644    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         2646    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x080000c8   0x080000c8   0x00000008   Code   RO         2647    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x080000d0   0x080000d0   0x00000004   Code   RO         2654    .ARM.Collect$$$$0000000E  mc_p.l(entry12b.o)
+    0x080000d4   0x080000d4   0x00000000   Code   RO         2649    .ARM.Collect$$$$0000000F  mc_p.l(entry10a.o)
+    0x080000d4   0x080000d4   0x00000000   Code   RO         2651    .ARM.Collect$$$$00000011  mc_p.l(entry11a.o)
+    0x080000d4   0x080000d4   0x00000004   Code   RO         2640    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x080000d8   0x080000d8   0x0000001c   Code   RO           67    .text               startup_py32c642xx.o
+    0x080000f4   0x080000f4   0x0000002c   Code   RO         2613    .text               mc_p.l(uidiv.o)
+    0x08000120   0x08000120   0x00000024   Code   RO         2615    .text               mc_p.l(memseta.o)
+    0x08000144   0x08000144   0x00000024   Code   RO         2668    .text               mc_p.l(init.o)
+    0x08000168   0x08000168   0x00000002   Code   RO           73    i.APP_ErrorHandler  main.o
+    0x0800016a   0x0800016a   0x00000002   PAD
+    0x0800016c   0x0800016c   0x00000084   Code   RO         2147    i.APP_SystemClockConfig  sys.o
+    0x080001f0   0x080001f0   0x00000038   Code   RO         2515    i.AiP33A06_ACK      aip33a06.o
+    0x08000228   0x08000228   0x0000003c   Code   RO         2516    i.AiP33A06_writebyte  aip33a06.o
+    0x08000264   0x08000264   0x0000001a   Code   RO         2517    i.AiP33A06_writecmd  aip33a06.o
+    0x0800027e   0x0800027e   0x00000002   PAD
+    0x08000280   0x08000280   0x00000018   Code   RO            3    i.DelayTime         system_py32c642.o
+    0x08000298   0x08000298   0x00000028   Code   RO          273    i.EXTI0_1_IRQHandler  py32c642_it.o
+    0x080002c0   0x080002c0   0x00000028   Code   RO          274    i.EXTI2_3_IRQHandler  py32c642_it.o
+    0x080002e8   0x080002e8   0x00000028   Code   RO          275    i.EXTI4_15_IRQHandler  py32c642_it.o
+    0x08000310   0x08000310   0x0000001c   Code   RO          747    i.FLASH_OB_OptrConfig  py32c642_hal_flash.o
+    0x0800032c   0x0800032c   0x00000034   Code   RO          751    i.FLASH_WaitForLastOperation  py32c642_hal_flash.o
+    0x08000360   0x08000360   0x00000034   Code   RO         2186    i.Get_Oil_Leve      out.o
+    0x08000394   0x08000394   0x00000004   Code   RO         2187    i.Get_Oil_Leve_Map  out.o
+    0x08000398   0x08000398   0x00000134   Code   RO         1516    i.Gpio_Init         gpio.o
+    0x080004cc   0x080004cc   0x0000001c   Code   RO          757    i.HAL_FLASH_Lock    py32c642_hal_flash.o
+    0x080004e8   0x080004e8   0x00000134   Code   RO          761    i.HAL_FLASH_OBProgram  py32c642_hal_flash.o
+    0x0800061c   0x0800061c   0x00000014   Code   RO          762    i.HAL_FLASH_OB_Launch  py32c642_hal_flash.o
+    0x08000630   0x08000630   0x0000001c   Code   RO          763    i.HAL_FLASH_OB_Lock  py32c642_hal_flash.o
+    0x0800064c   0x0800064c   0x00000028   Code   RO          764    i.HAL_FLASH_OB_Unlock  py32c642_hal_flash.o
+    0x08000674   0x08000674   0x00000028   Code   RO          770    i.HAL_FLASH_Unlock  py32c642_hal_flash.o
+    0x0800069c   0x0800069c   0x0000000c   Code   RO          950    i.HAL_GetTick       py32c642_hal.o
+    0x080006a8   0x080006a8   0x00000002   Code   RO          276    i.HardFault_Handler  py32c642_it.o
+    0x080006aa   0x080006aa   0x00000002   PAD
+    0x080006ac   0x080006ac   0x0000003c   Code   RO          494    i.LL_ADC_Init       py32c642_ll_adc.o
+    0x080006e8   0x080006e8   0x00000034   Code   RO          495    i.LL_ADC_REG_Init   py32c642_ll_adc.o
+    0x0800071c   0x0800071c   0x00000018   Code   RO         1668    i.LL_APB1_GRP2_EnableClock  tim.o
+    0x08000734   0x08000734   0x00000014   Code   RO          277    i.LL_EXTI_IsActiveFlag  py32c642_it.o
+    0x08000748   0x08000748   0x00000014   Code   RO         1517    i.LL_GPIO_SetPinMode  gpio.o
+    0x0800075c   0x0800075c   0x00000014   Code   RO         2518    i.LL_GPIO_SetPinMode  aip33a06.o
+    0x08000770   0x08000770   0x0000000c   Code   RO         1518    i.LL_GPIO_SetPinOutputType  gpio.o
+    0x0800077c   0x0800077c   0x00000014   Code   RO         1519    i.LL_GPIO_SetPinPull  gpio.o
+    0x08000790   0x08000790   0x00000014   Code   RO         1520    i.LL_GPIO_SetPinSpeed  gpio.o
+    0x080007a4   0x080007a4   0x00000020   Code   RO          667    i.LL_Init1msTick    py32c642_ll_utils.o
+    0x080007c4   0x080007c4   0x0000002c   Code   RO         1368    i.LL_LPTIM_Init     py32c642_ll_lptim.o
+    0x080007f0   0x080007f0   0x0000000c   Code   RO          669    i.LL_SetSystemCoreClock  py32c642_ll_utils.o
+    0x080007fc   0x080007fc   0x00000050   Code   RO         1242    i.LL_TIM_Init       py32c642_ll_tim.o
+    0x0800084c   0x0800084c   0x00000024   Code   RO          670    i.LL_mDelay         py32c642_ll_utils.o
+    0x08000870   0x08000870   0x00000002   Code   RO          278    i.NMI_Handler       py32c642_it.o
+    0x08000872   0x08000872   0x00000002   PAD
+    0x08000874   0x08000874   0x00000044   Code   RO         1669    i.NVIC_SetPriority  tim.o
+    0x080008b8   0x080008b8   0x00000002   Code   RO          279    i.PendSV_Handler    py32c642_it.o
+    0x080008ba   0x080008ba   0x0000002c   Code   RO         2519    i.Ram_Clear         aip33a06.o
+    0x080008e6   0x080008e6   0x00000002   Code   RO          280    i.SVC_Handler       py32c642_it.o
+    0x080008e8   0x080008e8   0x00000002   Code   RO          281    i.SysTick_Handler   py32c642_it.o
+    0x080008ea   0x080008ea   0x00000002   PAD
+    0x080008ec   0x080008ec   0x00000044   Code   RO            5    i.SystemInit        system_py32c642.o
+    0x08000930   0x08000930   0x00000168   Code   RO          282    i.TIM14_IRQHandler  py32c642_it.o
+    0x08000a98   0x08000a98   0x00000020   Code   RO          283    i.TIM1_BRK_UP_TRG_COM_IRQHandler  py32c642_it.o
+    0x08000ab8   0x08000ab8   0x0000000e   Code   RO         2672    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x08000ac6   0x08000ac6   0x00000002   Code   RO         2673    i.__scatterload_null  mc_p.l(handlers.o)
+    0x08000ac8   0x08000ac8   0x0000000e   Code   RO         2674    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x08000ad6   0x08000ad6   0x0000000c   Code   RO         2520    i._delay_us         aip33a06.o
+    0x08000ae2   0x08000ae2   0x00000002   PAD
+    0x08000ae4   0x08000ae4   0x00000094   Code   RO         1415    i.adc_init          adc.o
+    0x08000b78   0x08000b78   0x0000001c   Code   RO         2521    i.delay_ms          aip33a06.o
+    0x08000b94   0x08000b94   0x0000001a   Code   RO         1418    i.delay_us          adc.o
+    0x08000bae   0x08000bae   0x00000028   Code   RO         2524    i.display           aip33a06.o
+    0x08000bd6   0x08000bd6   0x00000002   PAD
+    0x08000bd8   0x08000bd8   0x00000020   Code   RO         2525    i.iic_start         aip33a06.o
+    0x08000bf8   0x08000bf8   0x0000001c   Code   RO         2526    i.iic_stop          aip33a06.o
+    0x08000c14   0x08000c14   0x00000054   Code   RO         1574    i.iwdg_init         pwr.o
+    0x08000c68   0x08000c68   0x00000088   Code   RO         1716    i.lptim_init        lptim.o
+    0x08000cf0   0x08000cf0   0x0000003c   Code   RO         1717    i.lptim_start       lptim.o
+    0x08000d2c   0x08000d2c   0x00000050   Code   RO           74    i.main              main.o
+    0x08000d7c   0x08000d7c   0x0000005c   Code   RO         1575    i.option_init       pwr.o
+    0x08000dd8   0x08000dd8   0x00000034   Code   RO         2527    i.sysinit           aip33a06.o
+    0x08000e0c   0x08000e0c   0x00000060   Code   RO         1670    i.timer14_init      tim.o
+    0x08000e6c   0x08000e6c   0x00000068   Code   RO         1671    i.timer1_init       tim.o
+    0x08000ed4   0x08000ed4   0x00000020   Data   RO          772    .constdata          py32c642_hal_flash.o
+    0x08000ef4   0x08000ef4   0x00000020   Data   RO         2670    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000f14, Size: 0x00000488, Max: 0x00000a00, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08000f14   0x00000004   Data   RW            8    .data               system_py32c642.o
+    0x20000004   0x08000f18   0x00000001   Data   RW           82    .data               main.o
+    0x20000005   0x08000f19   0x00000003   PAD
+    0x20000008   0x08000f1c   0x0000000c   Data   RW          971    .data               py32c642_hal.o
+    0x20000014   0x08000f28   0x00000002   Data   RW         2471    .data               switchdip.o
+    0x20000016   0x08000f2a   0x00000002   PAD
+    0x20000018        -       0x00000018   Zero   RW          771    .bss                py32c642_hal_flash.o
+    0x20000030        -       0x00000009   Zero   RW         2149    .bss                sys.o
+    0x20000039   0x08000f2a   0x00000003   PAD
+    0x2000003c        -       0x0000003c   Zero   RW         2193    .bss                out.o
+    0x20000078        -       0x0000000c   Zero   RW         2263    .bss                portscan.o
+    0x20000084   0x08000f2a   0x00000004   PAD
+    0x20000088        -       0x00000400   Zero   RW           64    STACK               startup_py32c642xx.o
+
+
+    Execution Region RW_IRAM2 (Exec base: 0x20000a00, Load base: 0x08000f2c, Size: 0x00000044, Max: 0x00000200, ABSOLUTE, UNINIT)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000a00        -       0x00000004   Zero   RW           75    .ARM.__AT_0x20000A00  main.o
+    0x20000a04   0x08000f2c   0x0000000c   PAD
+    0x20000a10        -       0x00000001   Zero   RW           76    .ARM.__AT_0x20000A10  main.o
+    0x20000a11   0x08000f2c   0x0000000f   PAD
+    0x20000a20        -       0x00000001   Zero   RW           77    .ARM.__AT_0x20000A20  main.o
+    0x20000a21   0x08000f2c   0x0000000f   PAD
+    0x20000a30        -       0x00000004   Zero   RW           78    .ARM.__AT_0x20000A30  main.o
+    0x20000a34   0x08000f2c   0x0000000c   PAD
+    0x20000a40        -       0x00000004   Zero   RW           79    .ARM.__AT_0x20000A40  main.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       174         10          0          0          0      23706   adc.o
+       398         22          0          0          0       6574   aip33a06.o
+       380         14          0          0          0       9276   gpio.o
+       196         16          0          0          0      19167   lptim.o
+        82          4          0          1         14     123449   main.o
+        56         12          0          0         60       6555   out.o
+         0          0          0          0         12       1943   portscan.o
+       176         30          0          0          0      12062   pwr.o
+        12          6          0         12          0       1529   py32c642_hal.o
+       544         78         32          0         24      16023   py32c642_hal_flash.o
+       542         56          0          0          0      35791   py32c642_it.o
+       112         12          0          0          0      24188   py32c642_ll_adc.o
+        44          6          0          0          0       4612   py32c642_ll_lptim.o
+        80          8          0          0          0      26890   py32c642_ll_tim.o
+        80         18          0          0          0       4093   py32c642_ll_utils.o
+        28          8        192          0       1024        596   startup_py32c642xx.o
+         0          0          0          2          0        641   switchdip.o
+       132         14          0          0          9      13006   sys.o
+        92         22          0          4          0     112908   system_py32c642.o
+       292         32          0          0          0      30909   tim.o
+
+    ----------------------------------------------------------------------
+      3434        368        256         24       1204     473918   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        14          0          0          5         61          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         4          0          0          0          0          0   entry12b.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0        100   memseta.o
+        44          0          0          0          0         72   uidiv.o
+
+    ----------------------------------------------------------------------
+       170         16          0          0          0        240   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       170         16          0          0          0        240   mc_p.l
+
+    ----------------------------------------------------------------------
+       170         16          0          0          0        240   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3604        384        256         24       1204     471846   Grand Totals
+      3604        384        256         24       1204     471846   ELF Image Totals
+      3604        384        256         24          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3860 (   3.77kB)
+    Total RW  Size (RW Data + ZI Data)              1228 (   1.20kB)
+    Total ROM Size (Code + RO Data + RW Data)       3884 (   3.79kB)
+
+==============================================================================
+

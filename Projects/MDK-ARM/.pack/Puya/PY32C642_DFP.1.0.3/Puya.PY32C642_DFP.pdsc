@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<package schemaVersion="1.0"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>Puya</vendor>
+  <url>https://www.puyasemi.com/</url>
+  <name>PY32C642_DFP</name>
+  <description>Puya PY32C642 Series Device Support</description>
+  <releases>
+    <release version="1.0.3" date="2023-12-05">
+        Flash to 24K.
+    </release>
+    <release version="1.0.2" date="2023-11-21">
+        Enable USART.
+    </release>
+    <release version="1.0.1" date="2023-10-23">
+        Update flash algorithm description.
+    </release>
+    <release version="1.0.0" date="2023-05-25">
+        First Release version of PY32C642 Device Family Pack.
+    </release>
+  </releases>
+  <keywords>
+    <keyword>Puya</keyword>
+    <keyword>Device Support</keyword>
+    <keyword>PY32C642</keyword>
+  </keywords>
+  <devices>
+    <family Dfamily="PY32C642 Series" Dvendor="Puya:176">
+      <processor Dcore="Cortex-M0+" DcoreVersion="r0p1" Dfpu="0" Dmpu="0" Dendian="Little-endian"/>
+      <description>
+  The PY32C642 mainstream microcontrollers are based on high-performance Arm Cortex-M0+ 32-bit RISC core.
+
+  The chip provides sleep and stop low-power operating modes to meet different low-power applications.
+  Offering a high level of integration, they are suitable for a variety of application scenarios, such as controllers, handheld devices, PC peripherals, games and GPS platforms, industrial applications, etc.
+      </description>
+
+      <sequences>
+        <!-- Override for Pre-Defined Sequences -->
+        <sequence name="DebugCoreStart">
+          <block>
+            // Replication of Standard Functionality
+            Write32(0xE000EDF0, 0xA05F0001);                                        // Enable Core Debug via DHCSR
+          </block>
+
+          <block info="DbgMCU registers">
+            // Device Specific Debug Setup
+            Write32(0x4002103C, Read32(0x4002103C) | 0x08000000);                   // Set RCC_APBENR1.DBGEN
+
+            Write32(0x40015804, DbgMCU_CR);                                         // DBGMCU_CR: Configure MCU Debug
+            Write32(0x40015808, DbgMCU_APB_Fz1);                                    // DBGMCU_APB_FZ1: Configure APB Peripheral Freeze1 Behavior
+            Write32(0x4001580C, DbgMCU_APB_Fz2);                                    // DBGMCU_APB_FZ2: Configure APB Peripheral Freeze2 Behavior
+          </block>
+        </sequence>
+      </sequences>
+
+      <!-- ************************  Subfamily 'PY32C642'  **************************** -->
+      <subFamily DsubFamily="PY32C642">
+        <processor Dclock="48000000"/>
+        <debug svd="SVD/py32c642xx.svd"/>
+        <debugvars configfile="Debug/PY32C642xx.dbgconf">
+          __var DbgMCU_CR      = 0x00000002;   // DBGMCU_CR:  DBG_STOP, DBG_STANDBY
+          __var DbgMCU_APB_Fz1 = 0x00000000;   // DGBMCU_APB_FZ1: All Peripherals Operate as in Normal Mode
+          __var DbgMCU_APB_Fz2 = 0x00000000;   // DGBMCU_APB_FZ2: All Peripherals Operate as in Normal Mode
+        </debugvars>
+
+        <!-- *************************  Device 'PY32C642x5'  ***************************** -->
+        <device Dname="PY32C642x5">
+          <compile header="Device/Include/py32c6xx.h"/>
+          <memory name="IROM1" access="rx" start="0x08000000" size="0x00006000" startup="1" default="1"/>
+          <memory name="IRAM1" access="rw" start="0x20000000" size="0x00000C00" init   ="0" default="1"/>
+          <algorithm name="Flash/PY32C642xx_24.FLM" start="0x08000000" size="0x00006000" default="1"/>
+          <algorithm name="Flash/PY32C642xx_OPT.FLM" start="0x1FFF0080" size="0x00000010" default="0"/>
+        </device>
+      </subFamily>
+
+    </family>
+  </devices>
+
+  <conditions>
+    <!-- Compiler Conditions -->
+    <condition id="Compiler ARMCC">
+      <require Tcompiler="ARMCC"/>
+    </condition>
+
+    <!-- Device Conditions -->
+    <condition id="PY32C642">
+      <description>Puya PYF0 Series Devices</description>
+      <require Dvendor="Puya:176" Dname="PY32C642*"/>
+    </condition>
+
+    <condition id="PY32C642 CMSIS">
+      <description>Puya PY32C642 Series devices and CMSIS</description>
+      <require condition="PY32C642"/>
+      <require Cclass="CMSIS" Cgroup="CORE"/>
+    </condition>
+
+    <condition id="PY32C642x5">
+      <description>Puya PY32C642x5 Devices</description>
+      <require Dvendor="Puya:176" Dname="PY32C642?5*"/>
+    </condition>
+
+    <condition id="PY32C642x5 ARMCC">
+      <description>Puya PY32C642x5 Devices and ARMCC Compiler</description>
+      <require condition="PY32C642x5"/>
+      <require condition="Compiler ARMCC"/>
+    </condition>
+
+  </conditions>
+
+  <components>
+    <component Cclass="Device" Cgroup="Startup" Cversion="0.0.1" condition="PY32C642 CMSIS">
+      <description>System Startup for Puya PY32C642 Series</description>
+      <files>
+        <!--  include folder -->
+        <file category="include" name="Device/Include/"/>
+        <!-- common device header file -->
+        <file category="header" name="Device/Include/py32c6xx.h"/>
+
+        <file category="source" condition="PY32C642x5 ARMCC" name="Device/Source/ARM/startup_py32c642x5.s" attr="config" version="0.0.1"/>
+
+        <file category="source" name="Device/Source/system_py32c6xx.c" attr="config" version="0.0.1"/>
+      </files>
+    </component>
+  </components>
+</package>
+
