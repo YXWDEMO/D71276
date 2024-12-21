@@ -1,0 +1,343 @@
+{
+  "name": "Project",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Common",
+        "files": [
+          {
+            "path": "../Src/system_py32c642.c"
+          },
+          {
+            "path": "startup_py32c642xx.s"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "Application",
+        "files": [],
+        "folders": [
+          {
+            "name": "User",
+            "files": [
+              {
+                "path": "../Src/main.c"
+              },
+              {
+                "path": "../Src/py32c642_it.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "BSP",
+        "files": [],
+        "folders": [
+          {
+            "name": "py32c642xx_Start_Kit",
+            "files": [
+              {
+                "path": "../../Drivers/BSP/PY32C642xx_Start_Kit/py32c642xx_ll_Start_Kit.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "Drivers",
+        "files": [],
+        "folders": [
+          {
+            "name": "PY32C642_HAL_Driver",
+            "files": [
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_ll_adc.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_ll_gpio.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_ll_rcc.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_ll_utils.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_ll_exti.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_hal_flash.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_hal.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_hal_cortex.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_ll_tim.c"
+              },
+              {
+                "path": "../../Drivers/PY32C642_HAL_Driver/Src/py32c642_ll_lptim.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "User",
+        "files": [
+          {
+            "path": "../../User/ADC.c"
+          },
+          {
+            "path": "../../User/GPIO.c"
+          },
+          {
+            "path": "../../User/PWR.c"
+          },
+          {
+            "path": "../../User/FLASH.c"
+          },
+          {
+            "path": "../../User/TIM.c"
+          },
+          {
+            "path": "../../User/TIM.h"
+          },
+          {
+            "path": "../../User/LPTIM.c"
+          },
+          {
+            "path": "../../User/LPTIM.h"
+          },
+          {
+            "path": "../../User/Disp.c"
+          },
+          {
+            "path": "../../User/sys.c"
+          },
+          {
+            "path": "../../User/out.c"
+          },
+          {
+            "path": "../../User/portscan.c"
+          },
+          {
+            "path": "../../User/baterry.c"
+          },
+          {
+            "path": "../../User/Sleep.c"
+          },
+          {
+            "path": "../../User/SwitchDip.c"
+          },
+          {
+            "path": "../../User/ledIcRgb.c"
+          },
+          {
+            "path": "../../User/AiP33A06.c"
+          },
+          {
+            "path": "../../User/AiP33A06.h"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": "PY32C642x5",
+  "packDir": ".pack/Puya/PY32C642_DFP.1.0.3",
+  "miscInfo": {
+    "uid": "66846eb92ba6443cbb82af2df2c9e8d2"
+  },
+  "targets": {
+    "Project": {
+      "excludeList": [],
+      "toolchain": "AC5",
+      "compileConfig": {
+        "cpuType": "Cortex-M0+",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "Objects/Project.sct",
+        "useCustomScatterFile": false,
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0xa00"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x20000a00",
+                "size": "0x200"
+              },
+              "isChecked": true,
+              "noInit": true
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x6000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "null",
+          "cpuName": "null"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".",
+          "../Inc",
+          "../../Drivers/CMSIS/Include",
+          "../../Drivers/CMSIS/Device/PY32C6xx/Include",
+          "../../Drivers/PY32C642_HAL_Driver/Inc",
+          "../../Drivers/BSP/PY32C642xx_Start_Kit",
+          "../../User",
+          "RTE/_Project"
+        ],
+        "libList": [],
+        "defineList": [
+          "PY32C642x5",
+          "USE_FULL_LL_DRIVER"
+        ]
+      },
+      "builderOptions": {
+        "AC5": {
+          "version": 4,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-0",
+            "one-elf-section-per-function": true,
+            "c99-mode": true,
+            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "warnings": "all-warnings"
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "xo-base": "",
+            "ro-base": "0x00000000",
+            "rw-base": "0x20000000",
+            "$disableOutputTask": true
+          }
+        }
+      }
+    }
+  },
+  "version": "3.5"
+}
